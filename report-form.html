@@ -1,0 +1,482 @@
+
+<!doctype html>
+<html lang="ru-RU">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+	<meta name="viewport" content="width=device-width">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700,700i,900&amp;subset=cyrillic,cyrillic-ext" rel="stylesheet">
+    <title>Форма отчета</title>
+                <!--[if lt IE 9]><![endif]-->
+                <link rel="icon" type="image/png" href="/favicon.ico" />
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link href="bitrix/cache/css/s2/ncmu/template_836bdc360623b3fd78e0598055412f8f/template_836bdc360623b3fd78e0598055412f8f_v1.css?156291198357785" type="text/css"  data-template-style="true" rel="stylesheet" />
+
+
+
+    	<link rel="stylesheet" href="local/layout/css/style980.css" media="screen and (max-width: 1210px)">
+    	<link rel="stylesheet" href="local/layout/css/style760.css" media="screen and (max-width: 1020px)">
+    	<link rel="stylesheet" href="local/layout/css/style480.css" media="screen and (max-width: 759px)">
+
+        <link rel="stylesheet" href="new/css/style.css" />
+        <link rel="stylesheet" href="new/js/mcustomscrollbar/jquery.mCustomScrollbar.css" />
+        <link rel="stylesheet" href="lk/css/styles.css" />
+</head>
+<body>
+<div class="wrap_h wrap-cabinet"><div class="wrap_in">
+  <header>
+	<div class="top">
+		<div class="wrap">
+			<div class="logo"><a href="/"><img src="local/layout/images/logo.png" /></a></div>
+			<span class="show_nav"><span></span></span>
+            			<div class="top_user">
+				<a href="#">Менеджер Центра (NCMU_8)</a>
+				<ul>
+					<li><a href="/personal/">Профиль</a></li>
+
+															<li class="top_user_out"><a href="/index.php?logout=yes">Выход</a></li>
+				</ul>
+			</div>
+            			<div class="top_search">
+				<span class="show_search"></span>
+				<div class="search">
+					<form method="get" action="/search/">
+						<div class="search_inp"><input type="text" value="" placeholder="Поиск" name="q" /></div>
+						<div class="search_sub"><input type="submit" value="" /></div>
+						<div class="clear"></div>
+					</form>
+				</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+	</div>
+	<div class="nav_top_bg">
+		<div class="wrap">
+
+    <nav class="nav_top">
+        <ul>
+
+
+
+
+            <li><a href="/centers/">Центры</a></li>
+
+
+
+
+
+            <li><a href="/organizations/">Организации</a></li>
+
+
+
+
+
+            <li class="sub_nav "><a href="/docs/">Официальные документы</a>
+						<div class="nav_top_sub">
+							<div class="wrap">
+								<ul>
+
+
+
+
+
+            <li><a href="/docs/?category=56">Нормативные правовые документы</a></li>
+        </ul><ul>
+
+
+
+
+            <li><a href="/docs/?category=61">Документы конкурсного отбора</a></li>
+
+
+
+			</ul><div class="clear"></div></div></div></li>
+
+            <li><a href="/councils/">Советы</a></li>
+
+
+
+
+
+            <li><a href="/results/">Результаты работы центров</a></li>
+
+
+
+
+
+            <li class="sub_nav "><a href="/help/">Помощь</a>
+						<div class="nav_top_sub">
+							<div class="wrap">
+								<ul>
+
+
+
+
+
+            <li><a href="/help/faq/">Вопросы и ответы</a></li>
+        </ul><ul>
+
+
+
+
+            <li><a href="/help/contacts/">Контакты</a></li>
+
+
+
+	</ul><div class="clear"></div></div></div></li>
+</ul>
+				<ul class="nav_mob">
+					<li class="nav_top_lk"><a href="/personal/">Личный кабинет</a></li>
+					<li><a href="/search/">Поиск</a></li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</header>
+
+<!-- lk -->
+<div class="lk">
+
+    <!-- lk side -->
+    <div class="lk-side">
+        <div class="lk-side-menu">
+            <ul>
+                <li><a href="#"><div class="lk-side-menu-icon"><img src="lk/images/side-menu-01.svg" alt="" /></div>Математические НЦМУ</a></li>
+                <li><a href="#"><div class="lk-side-menu-icon"><img src="lk/images/side-menu-02.svg" alt="" /></div>Геномные НЦМУ</a></li>
+                <li><a href="#"><div class="lk-side-menu-icon"><img src="lk/images/side-menu-03.svg" alt="" /></div>НЦМУ по приоритетам</a></li>
+                <li class="sep"><a href="#"><div class="lk-side-menu-icon"><img src="lk/images/side-menu-04.svg" alt="" /></div>Заявки</a></li>
+                <li class="active"><a href="#"><div class="lk-side-menu-icon"><img src="lk/images/side-menu-05.svg" alt="" /></div>Отчеты</a></li>
+                <li><a href="#"><div class="lk-side-menu-icon"><img src="lk/images/side-menu-06.svg" alt="" /></div>Решения</a></li>
+                <li><a href="#"><div class="lk-side-menu-icon"><img src="lk/images/side-menu-07.svg" alt="" /></div>Оценки</a></li>
+                <li class="sep"><a href="#"><div class="lk-side-menu-icon"><img src="lk/images/side-menu-08.svg" alt="" /></div>Организации</a></li>
+                <li><a href="#"><div class="lk-side-menu-icon"><img src="lk/images/side-menu-09.svg" alt="" /></div>Вакансии</a></li>
+                <li class="sep"><a href="#"><div class="lk-side-menu-icon"><img src="lk/images/side-menu-10.svg" alt="" /></div>Выход</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- side END -->
+
+    <!-- lk container -->
+    <div class="lk-container">
+        <div class="lk-breadcrumbs"><a href="#">Эксперт РИЭПП</a> &nbsp;—&nbsp; Форма отчета</div>
+        <div class="lk-page-title">Форма отчета</div>
+
+        <!-- lk report form -->
+        <div class="lk-report-form">
+            <form action="#" method="post">
+
+                <!-- lk report form group -->
+                <div class="lk-report-form-group">
+                    <div class="lk-report-form-group-header">
+                        <div class="lk-report-form-group-title"><span>1.</span>Расходы на выплату вознаграждения работникам центра</div>
+                        <div class="lk-report-form-group-summ"></div>
+                    </div>
+                    <div class="lk-report-form-subgroups">
+
+                        <!-- lk report form subgroup -->
+                        <div class="lk-report-form-subgroup">
+                            <div class="lk-report-form-subgroup-header">
+                                <div class="lk-report-form-subgroup-title"><span>1.1.</span>Заработная плата</div>
+                                <div class="lk-report-form-subgroup-summ"></div>
+                            </div>
+
+                            <div class="lk-report-form-item-headers">
+                                <div class="lk-report-form-item-header">
+                                    <div class="lk-report-form-item-header-title">Основание</div>
+                                    <div class="lk-report-form-item-header-text">ФИО, название статьи расходов и т.п</div>
+                                </div>
+                                <div class="lk-report-form-item-header lk-report-form-item-header-sep">
+                                    <div class="lk-report-form-item-header-title">Основание</div>
+                                    <div class="lk-report-form-item-header-text">Платежный документ</div>
+                                </div>
+                                <div class="lk-report-form-item-header lk-report-form-item-header-sep">
+                                    <div class="lk-report-form-item-header-title">Средства гранта</div>
+                                    <div class="lk-report-form-item-header-text">этого года</div>
+                                </div>
+                                <div class="lk-report-form-item-header">
+                                    <div class="lk-report-form-item-header-title">Средства гранта</div>
+                                    <div class="lk-report-form-item-header-text">прошлого года</div>
+                                </div>
+                                <div class="lk-report-form-item-header">
+                                    <div class="lk-report-form-item-header-title">Внебюджетные средства</div>
+                                    <div class="lk-report-form-item-header-text">этого года</div>
+                                </div>
+                                <div class="lk-report-form-item-header">
+                                    <div class="lk-report-form-item-header-title">Внебюджетные средства</div>
+                                    <div class="lk-report-form-item-header-text">прошлого года</div>
+                                </div>
+                                <div class="lk-report-form-item-header lk-report-form-item-header-sep">
+                                    <div class="lk-report-form-item-header-title">Итого</div>
+                                </div>
+                            </div>
+
+                            <div class="lk-report-form-items"></div>
+
+                            <div class="lk-report-form-item-btn-add"><a href="#" data-template="1"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="14" y="6" width="2" height="14" transform="rotate(90 14 6)" /><rect x="8.00195" y="14" width="2" height="14" transform="rotate(-180 8.00195 14)" /></svg>добавить статью расходов</a></div>
+
+                        </div>
+                        <!-- lk report form subgroup END -->
+
+                        <!-- lk report form subgroup -->
+                        <div class="lk-report-form-subgroup">
+                            <div class="lk-report-form-subgroup-header">
+                                <div class="lk-report-form-subgroup-title"><span>1.2.</span>Расходы на оплату командировок работников центра</div>
+                                <div class="lk-report-form-subgroup-summ"></div>
+                            </div>
+
+                            <div class="lk-report-form-item-headers">
+                                <div class="lk-report-form-item-header">
+                                    <div class="lk-report-form-item-header-title">Основание</div>
+                                    <div class="lk-report-form-item-header-text">ФИО, название статьи расходов и т.п</div>
+                                </div>
+                                <div class="lk-report-form-item-header lk-report-form-item-header-sep">
+                                    <div class="lk-report-form-item-header-title">Основание</div>
+                                    <div class="lk-report-form-item-header-text">Платежный документ</div>
+                                </div>
+                                <div class="lk-report-form-item-header lk-report-form-item-header-sep">
+                                    <div class="lk-report-form-item-header-title">Средства гранта</div>
+                                    <div class="lk-report-form-item-header-text">этого года</div>
+                                </div>
+                                <div class="lk-report-form-item-header">
+                                    <div class="lk-report-form-item-header-title">Средства гранта</div>
+                                    <div class="lk-report-form-item-header-text">прошлого года</div>
+                                </div>
+                                <div class="lk-report-form-item-header">
+                                    <div class="lk-report-form-item-header-title">Внебюджетные средства</div>
+                                    <div class="lk-report-form-item-header-text">этого года</div>
+                                </div>
+                                <div class="lk-report-form-item-header">
+                                    <div class="lk-report-form-item-header-title">Внебюджетные средства</div>
+                                    <div class="lk-report-form-item-header-text">прошлого года</div>
+                                </div>
+                                <div class="lk-report-form-item-header lk-report-form-item-header-sep">
+                                    <div class="lk-report-form-item-header-title">Итого</div>
+                                </div>
+                            </div>
+
+                            <div class="lk-report-form-items"></div>
+
+                            <div class="lk-report-form-item-btn-add"><a href="#" data-template="1"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="14" y="6" width="2" height="14" transform="rotate(90 14 6)" /><rect x="8.00195" y="14" width="2" height="14" transform="rotate(-180 8.00195 14)" /></svg>добавить статью расходов</a></div>
+                        </div>
+                        <!-- lk report form subgroup END-->
+
+                    </div>
+                </div>
+                <!-- lk report form group -->
+
+                <!-- lk report form group -->
+                <div class="lk-report-form-group">
+                    <div class="lk-report-form-group-header">
+                        <div class="lk-report-form-group-title"><span>2.</span>Расходы на оплату текущего ремонта лаборатории, а также прочие расходы, непосредственно связанные с проведением научного исследования и&nbsp;разработки технологий (не более 5% от средств гранта)</div>
+                        <div class="lk-report-form-group-summ"></div>
+                    </div>
+                    <div class="lk-report-form-subgroups">
+
+                        <!-- lk report form subgroup -->
+                        <div class="lk-report-form-subgroup">
+                            <div class="lk-report-form-item-headers">
+                                <div class="lk-report-form-item-header">
+                                    <div class="lk-report-form-item-header-title">Основание</div>
+                                    <div class="lk-report-form-item-header-text">ФИО, название статьи расходов и т.п</div>
+                                </div>
+                                <div class="lk-report-form-item-header lk-report-form-item-header-sep">
+                                    <div class="lk-report-form-item-header-title">Основание</div>
+                                    <div class="lk-report-form-item-header-text">Платежный документ</div>
+                                </div>
+                                <div class="lk-report-form-item-header lk-report-form-item-header-sep">
+                                    <div class="lk-report-form-item-header-title">Средства гранта</div>
+                                    <div class="lk-report-form-item-header-text">этого года</div>
+                                </div>
+                                <div class="lk-report-form-item-header">
+                                    <div class="lk-report-form-item-header-title">Средства гранта</div>
+                                    <div class="lk-report-form-item-header-text">прошлого года</div>
+                                </div>
+                                <div class="lk-report-form-item-header">
+                                    <div class="lk-report-form-item-header-title">Внебюджетные средства</div>
+                                    <div class="lk-report-form-item-header-text">этого года</div>
+                                </div>
+                                <div class="lk-report-form-item-header">
+                                    <div class="lk-report-form-item-header-title">Внебюджетные средства</div>
+                                    <div class="lk-report-form-item-header-text">прошлого года</div>
+                                </div>
+                                <div class="lk-report-form-item-header lk-report-form-item-header-sep">
+                                    <div class="lk-report-form-item-header-title">Итого</div>
+                                </div>
+                            </div>
+
+                            <div class="lk-report-form-items"></div>
+
+                            <div class="lk-report-form-item-btn-add"><a href="#" data-template="2"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="14" y="6" width="2" height="14" transform="rotate(90 14 6)" /><rect x="8.00195" y="14" width="2" height="14" transform="rotate(-180 8.00195 14)" /></svg>добавить статью расходов</a></div>
+                        </div>
+                        <!-- lk report form subgroup END -->
+
+                    </div>
+                </div>
+                <!-- lk report form group -->
+
+                <div class="lk-report-form-summ">Итого:<span></span></div>
+
+                <div class="lk-report-form-ctrl">
+                    <div class="lk-report-form-temp-link"><a href="#" class="lk-btn-border">Сохранить</a></div>
+                    <div class="lk-report-form-submit"><input type="submit" value="Отправить" class="lk-btn" /></div>
+                </div>
+            </form>
+
+            <div class="lk-report-form-templates">
+                <div class="lk-report-form-template" data-id="1">
+                    <div class="lk-report-form-item">
+                        <div class="lk-report-form-item-drag"><svg width="12" height="9" viewBox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="12" height="1" /><rect y="4" width="12" height="1" /><rect y="8" width="12" height="1" /></svg></div>
+                        <div class="lk-report-form-item-number"></div>
+                        <div class="lk-report-form-item-row">
+                            <div class="lk-report-form-item-field"><input type="text" name="name[]" value="" /></div>
+                            <div class="lk-report-form-item-field lk-report-form-item-field-sep"><input type="text" name="doc[]" value="" /></div>
+                            <div class="lk-report-form-item-field lk-report-form-item-field-sep"><input type="text" name="grant_funds[]" value="" class="lk-report-form-item-cost" /></div>
+                            <div class="lk-report-form-item-field"><input type="text" name="grant_funds_prev[]" value="" class="lk-report-form-item-cost" /></div>
+                            <div class="lk-report-form-item-field"><input type="text" name="budget_funds[]" value="" class="lk-report-form-item-cost" /></div>
+                            <div class="lk-report-form-item-field"><input type="text" name="budget_funds_prev[]" value="" class="lk-report-form-item-cost" /></div>
+                            <div class="lk-report-form-item-field lk-report-form-item-field-sep"><div class="lk-report-form-item-summ"></div></div>
+                        </div>
+                        <a href="#" class="lk-report-form-item-remove"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="10.9746" y="3.79883" width="1.44975" height="10.1482" transform="rotate(45 10.9746 3.79883)" /><rect x="12" y="10.9746" width="1.44975" height="10.1482" transform="rotate(135 12 10.9746)" /></svg></a>
+                    </div>
+                </div>
+
+                <div class="lk-report-form-template" data-id="2">
+                    <div class="lk-report-form-item lk-report-form-item-with-contract">
+                        <div class="lk-report-form-item-drag"><svg width="12" height="9" viewBox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="12" height="1" /><rect y="4" width="12" height="1" /><rect y="8" width="12" height="1" /></svg></div>
+                        <div class="lk-report-form-item-number"></div>
+                        <div class="lk-report-form-item-row">
+                            <div class="lk-report-form-item-field"><input type="text" name="name[]" value="" /></div>
+                            <div class="lk-report-form-item-field lk-report-form-item-field-sep"><input type="text" name="doc[]" value="" /></div>
+                            <div class="lk-report-form-item-field lk-report-form-item-field-sep"><input type="text" name="grant_funds[]" value="" class="lk-report-form-item-cost" /></div>
+                            <div class="lk-report-form-item-field"><input type="text" name="grant_funds_prev[]" value="" class="lk-report-form-item-cost" /></div>
+                            <div class="lk-report-form-item-field"><input type="text" name="budget_funds[]" value="" class="lk-report-form-item-cost" /></div>
+                            <div class="lk-report-form-item-field"><input type="text" name="budget_funds_prev[]" value="" class="lk-report-form-item-cost" /></div>
+                            <div class="lk-report-form-item-field lk-report-form-item-field-sep"><div class="lk-report-form-item-summ"></div></div>
+                        </div>
+                        <a href="#" class="lk-report-form-item-remove"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="10.9746" y="3.79883" width="1.44975" height="10.1482" transform="rotate(45 10.9746 3.79883)" /><rect x="12" y="10.9746" width="1.44975" height="10.1482" transform="rotate(135 12 10.9746)" /></svg></a>
+                        <div class="lk-report-form-item-contract">
+                            <div class="lk-report-form-item-contract-types">
+                                <div class="lk-report-form-item-contract-type"><label><input type="radio" name="contract_type[01]" value="now" checked="checked" /><span>Контракт этого периода</span></label></div>
+                                <div class="lk-report-form-item-contract-type"><label><input type="radio" name="contract_type[01]" value="past" /><span>Контракт прошедшего периода</span></label></div>
+                            </div>
+                            <div class="lk-report-form-item-contract-info">
+                                <div class="lk-report-form-item-contract-field">
+                                    <div class="lk-report-form-item-contract-field-label">Номер закупки</div>
+                                    <div class="lk-report-form-item-contract-field-input"><input type="text" name="contract_info_buy[]" value="" /></div>
+                                </div>
+                                <div class="lk-report-form-item-contract-field">
+                                    <div class="lk-report-form-item-contract-field-label">Номер договора</div>
+                                    <div class="lk-report-form-item-contract-field-input"><input type="text" name="contract_info_number[]" value="" /></div>
+                                </div>
+                                <div class="lk-report-form-item-contract-field">
+                                    <div class="lk-report-form-item-contract-field-label">Дата заключения договора</div>
+                                    <div class="lk-report-form-item-contract-field-input"><input type="text" name="contract_info_start[]" value="" /></div>
+                                </div>
+                                <div class="lk-report-form-item-contract-field">
+                                    <div class="lk-report-form-item-contract-field-label">Дата исполнения обязательств</div>
+                                    <div class="lk-report-form-item-contract-field-input"><input type="text" name="contract_info_end[]" value="" /></div>
+                                </div>
+                                <div class="lk-report-form-item-contract-field">
+                                    <div class="lk-report-form-item-contract-field-label">НМЦД, руб</div>
+                                    <div class="lk-report-form-item-contract-field-input"><input type="text" name="contract_info_summ[]" value="" /></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lk-report-form-window">
+                <div class="lk-report-form-window-month">Ежемесячный отчет: <span>август 2020</span></div>
+                <div class="lk-report-form-window-summ">Итого: <strong><span></span> руб.</strong><a href="#" class="lk-report-form-window-detail-link"><svg width="37" height="37" viewBox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="18.3848" cy="18.3848" r="13" transform="rotate(45 18.3848 18.3848)" /><rect x="23.459" y="17.5176" width="1.44975" height="10.1482" transform="rotate(90 23.459 17.5176)" /><rect x="19.1094" y="23.3164" width="1.44975" height="10.1482" transform="rotate(-180 19.1094 23.3164)" /></svg></a></div>
+                <div class="lk-report-form-window-detail">
+                </div>
+            </div>
+        </div>
+        <!-- lk report form END -->
+
+    </div>
+    <!-- lk container END -->
+
+</div>
+<!-- lk END -->
+
+</div></div>
+<footer>
+	<div class="wrap">
+		<div class="logo_bot"><img src="local/layout/images/gerb.png" /></div>
+		<div class="copy">
+			Портал разработан при поддержке <a href="https://minobrnauki.gov.ru/" target="_blank">Минобрнауки России</a>
+			<div class="bot_tel"><a href="tel:+74959162884">+7 (495) 916-28-84</a></div>
+		</div>
+    <span class="show_bot_nav"><span></span></span>
+    <div class="clear show760"></div>
+		<nav class="nav_bot">
+
+<ul>
+
+
+
+
+            <li><a href="/centers/">Центры</a></li>
+
+
+
+
+
+            <li><a href="/organizations/">Организации</a></li>
+
+
+
+
+
+            <li><a href="/councils/">Советы</a></li>
+
+
+
+
+
+            <li><a href="/results/">Результаты работы центров</a></li>
+
+
+
+
+
+            <li><a href="/help/">Помощь</a></li>
+
+
+
+
+
+            <li class="active"><a href="/personal/">Личные кабинеты</a></li>
+
+
+
+
+</ul>
+		</nav>
+		<nav class="nav_bot nav_bot2">
+			<div class="nav_bot_t"><a href='/docs/'>Официальные документы</a>:</div>
+            			<ul>
+                				<li><a href="/docs/?category=56">Нормативные правовые документы</a></li>
+                				<li><a href="/docs/?category=61">Документы конкурсного отбора</a></li>
+                			</ul>
+		</nav>
+		<nav class="nav_bot nav_bot3">
+			<div class="nav_bot_t"><a href='/councils/'>Советы НЦМУ</a></div>
+            			<ul>
+                			</ul>
+		</nav>
+		<div class="clear"></div>
+	</div>
+</footer>
+<script src="local/layout/js/html5.js"></script>
+
+<script type="text/javascript"  src="bitrix/cache/js/s2/ncmu/template_a038904fd9494746d35576cde26b940c/template_a038904fd9494746d35576cde26b940c_v1.js?1562151943476245"></script>
+<script src="new/js/mcustomscrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="new/js/jquery.mask.min.js"></script>
+<script src="new/js/scripts.js"></script>
+<script src="lk/js/Sortable.min.js"></script>
+<script src="lk/js/tools.js"></script>
+</body>
+</html>

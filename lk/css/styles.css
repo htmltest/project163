@@ -1,0 +1,149 @@
+.wrap_in {padding:0 0 272px 0}
+footer {margin-top:-272px}
+
+.lk {position:relatve; background:#fff; min-height:calc(100vh - 189px - 272px)}
+.lk *,
+.lk *::before,
+.lk *::after {outline:none; box-sizing:border-box; text-align:left}
+
+.lk-btn {display:inline-block; vertical-align:top; margin:0; padding:0 20px; overflow:visible; outline:none; height:48px; text-decoration:none; background:#1d36b4; color:#fff; border:none; border-radius:0; font:16px/48px Roboto, sans-serif; letter-spacing:0; text-align:center; position:relative; -webkit-appearance:none; cursor:pointer; transition:all 0.2s; box-sizing:border-box}
+.lk-btn:hover {background:#2f4cdb; color:#fff; text-decoration:none}
+.lk-btn:active {background:#1d36b4; color:#fff; text-decoration:none}
+
+.lk-btn-border {display:inline-block; vertical-align:top; margin:0; padding:0 20px; overflow:visible; outline:none; height:48px; text-decoration:none; background:#fff; color:#1d36b4; border:1px solid #1d36b4; border-radius:0; font:16px/46px Roboto, sans-serif; letter-spacing:0; text-align:center; position:relative; -webkit-appearance:none; cursor:pointer; transition:all 0.2s; box-sizing:border-box}
+.lk-btn-border:hover {background:#dde4f1; color:#4e4e4e; text-decoration:none}
+.lk-btn-border:active {background:#fff; color:#4e4e4e; text-decoration:none}
+
+.lk-side {position:absolute; left:0; top:189px; bottom:0; width:62px; overflow:hidden; z-index:100; border-right:1px solid #e3e3e3; background:#fff; transition:all 0.25s cubic-bezier(0.4, 0, 0.2, 1)}
+.lk-side:hover {width:271px; box-shadow:0px 4px 30px rgba(66, 66, 66, 0.15)}
+
+.lk-side-menu {position:absolute; left:0; top:0; bottom:0; right:0; white-space:nowrap; border-top:1px solid #e3e3e3; overflow:auto}
+.lk-side-menu ul {position:relative; margin:0; padding:0; list-style:none; font-size:12px; line-height:45px; font-weight:500; text-transform:uppercase}
+.lk-side-menu ul li {margin:0; padding:0; position:relative}
+.lk-side-menu ul li::before {display:none}
+.lk-side-menu ul li.sep {border-top:1px solid #e7e7e7}
+.lk-side-menu ul li a {text-decoration:none; display:block; padding:0 0 0 57px; color:rgba(77, 75, 75, 0); height:45px; position:relative; transition:background 0.2s, color 0.5s ease}
+.lk-side:hover .lk-side-menu ul li a {color:rgba(77, 75, 75, 1)}
+.lk-side-menu ul li.active a,
+.lk-side-menu ul li a:hover {background:#ddf5ff}
+.lk-side-menu-icon {display:block; position:absolute; left:0; top:50%; width:62px; transform:translateY(-50%); transition:all 0.2s; text-align:center; line-height:0}
+.lk-side-menu-icon img {display:inline-block; vertical-align:middle}
+
+.lk-container {max-width:1094px; margin:0 auto; padding:30px 0 46px 0}
+.lk-breadcrumbs {font-weight:normal; font-size:14px; line-height:16px; letter-spacing:0.03em; color:#a2a2a2}
+.lk-breadcrumbs a {color:#}
+.lk-page-title {font-weight:bold; font-size:28px; line-height:33px; color:#0a0a0a; margin:26px 0 0 0}
+
+.lk-report-form {margin:40px 0 0 0}
+.lk-report-form form {margin:0; padding:0}
+
+.lk-report-form-ctrl {margin:37px 0 0 0; font-size:0; line-height:0; letter-spacing:-1px; text-align:right}
+.lk-report-form-temp-link {display:inline-block; vertical-align:top; margin:0 10px 0 0; width:223px}
+.lk-report-form-temp-link a {display:block; width:100%}
+.lk-report-form-submit {display:inline-block; vertical-align:top; width:223px}
+.lk-report-form-submit .lk-btn {display:block; width:100%}
+
+.lk-report-form-summ {margin:19px 0 0 0; text-align:right; font-weight:normal; font-size:16px; line-height:30px; color:#6d6d6d}
+.lk-report-form-summ span {font-size:20px; color:#000; margin:0 0 0 10px}
+
+.lk-report-form-group {margin:40px 0 0 0}
+.lk-report-form-group-header::after {content:""; display:block; clear:both}
+.lk-report-form-group-title {float:left; max-width:calc(100% - 160px); position:relative; padding:0 0 0 48px; font-weight:500; font-size:24px; line-height:28px; color:#404040}
+.lk-report-form-group-title span {position:absolute; left:0; top:0}
+.lk-report-form-group-summ {float:right; font-weight:normal; font-size:18px; line-height:27px; color:#000}
+
+.lk-report-form-subgroups {margin:20px 0 0 0}
+.lk-report-form-subgroup {margin:40px 0 0 0; padding:0 0 19px 0; border-bottom:1px solid #e0e0e0}
+.lk-report-form-subgroup-header {margin:0 0 26px 0}
+.lk-report-form-subgroup-header::after {content:""; display:block; clear:both}
+.lk-report-form-subgroup-title {float:left; position:relative; padding:0 0 0 48px; font-weight:500; font-size:18px; line-height:27px; color:#404040}
+.lk-report-form-subgroup-title span {position:absolute; left:0; top:0}
+.lk-report-form-subgroup-summ {float:right; font-weight:normal; font-size:18px; line-height:27px; color:#000}
+
+.lk-report-form-item-headers {border-bottom:1px solid #e0e0e0; font-size:11px; line-height:17px}
+.lk-report-form-item-headers::after {content:""; display:block; clear:both}
+.lk-report-form-item-header {float:left; padding:0 0 4px 10px; height:34px}
+.lk-report-form-item-header:first-child {padding-left:0}
+.lk-report-form-item-header:nth-child(1) {width:198px}
+.lk-report-form-item-header:nth-child(2) {width:184px}
+.lk-report-form-item-header:nth-child(3) {width:142px}
+.lk-report-form-item-header:nth-child(4) {width:142px}
+.lk-report-form-item-header:nth-child(5) {width:142px}
+.lk-report-form-item-header:nth-child(6) {width:152px}
+.lk-report-form-item-header-sep {border-left:1px solid #e0e0e0}
+.lk-report-form-item-header-title {font-weight:normal; color:#060606}
+.lk-report-form-item-header-text {font-weight:300; color:#4e4e4e}
+
+.lk-report-form-item-btn-add {margin:20px 0 0 0}
+.lk-report-form-items:empty+.lk-report-form-item-btn-add {margin:30px 0 0 0}
+.lk-report-form-item-btn-add a {display:inline-block; vertical-align:top; text-decoration:none; height:34px; background:#f1f4f9; color:#4e4e4e; font-weight:300; font-size:14px; line-height:34px; padding:0 18px}
+.lk-report-form-item-btn-add a:hover {text-decoration:none; color:#fff; background:#1d36b4}
+.lk-report-form-item-btn-add svg {display:inline-block; vertical-align:middle; margin:-2px 10px 0 0}
+.lk-report-form-item-btn-add rect {fill:#1c48a3; transition:all 0.3s 0.02s ease}
+.lk-report-form-item-btn-add a:hover rect {fill:#fff}
+
+.lk-report-form-item {position:relative}
+.lk-report-form-item-with-contract {border-top:2px solid #86a0d9}
+.lk-report-form-item-with-contract:first-child {border-top:none}
+.lk-report-form-item-row::after {content:""; display:block; clear:both}
+.lk-report-form-item-field {float:left; padding:20px 10px 0 10px; height:52px}
+.lk-report-form-item-with-contract .lk-report-form-item-field {padding-bottom:20px; height:72px}
+.lk-report-form-item-field:first-child {padding-left:0}
+.lk-report-form-item-field:nth-child(1) {width:198px}
+.lk-report-form-item-field:nth-child(2) {width:184px}
+.lk-report-form-item-field:nth-child(3) {width:142px}
+.lk-report-form-item-field:nth-child(4) {width:142px}
+.lk-report-form-item-field:nth-child(5) {width:142px}
+.lk-report-form-item-field:nth-child(6) {width:152px}
+.lk-report-form-item-field-sep {border-left:1px solid #e0e0e0}
+.lk-report-form-item-field input {display:block; vertical-align:top; box-sizing:border-box; margin:0; padding:5px 9px; outline:none; width:100%; height:32px; border:1px solid #cdd8ec; -webkit-appearance:none; color:#000; font:300 13px/20px Roboto, sans-serif; border-radius:0}
+.lk-report-form-item-summ {font-weight:500; font-size:13px; line-height:20px; color:#000; padding:6px 0 0 0; white-space:nowrap}
+.lk-report-form-item-drag {position:absolute; left:-56px; top:20px; width:32px; height:32px; cursor:move}
+.lk-report-form-item-drag svg {display:block; position:absolute; left:50%; top:50%; transform:translate(-50%, -50%)}
+.lk-report-form-item-drag rect {fill:#c4c4c4}
+.lk-report-form-item-number {position:absolute; left:-24px; top:20px; height:32px; font-size:12px; line-height:32px; font-weight:300; color:#4e4e4e}
+.lk-report-form-item-remove {display:block; position:absolute; right:-36px; top:22px; width:26px; height:26px; background:#e8edf6; border-radius:50%}
+.lk-report-form-item-remove:hover {background:#1c48a3}
+.lk-report-form-item-remove svg {display:block; position:absolute; left:50%; top:50%; transform:translate(-50%, -50%)}
+.lk-report-form-item-remove rect {fill:#1c48a3; transition:all 0.3s 0.02s ease}
+.lk-report-form-item-remove:hover rect {fill:#fff}
+.lk-report-form-item-contract {border-top:1px solid #e0e0e0}
+.lk-report-form-item-contract-types {margin:24px 0 0 0}
+.lk-report-form-item-contract-types::after {content:""; display:block; clear:both}
+.lk-report-form-item-contract-type {float:left; margin:0 0 0 20px}
+.lk-report-form-item-contract-type:first-child {margin:0}
+.lk-report-form-item-contract-type label {display:block; cursor:pointer}
+.lk-report-form-item-contract-type input {display:none}
+.lk-report-form-item-contract-type span {display:block; position:relative; padding:0 0 0 28px; font-weight:normal; font-size:15px; line-height:23px; color:#4e4e4e}
+.lk-report-form-item-contract-type span::before {content:""; display:block; position:absolute; left:0; top:2px; width:18px; height:18px; border:1px solid #c1c1c1; border-radius:50%}
+.lk-report-form-item-contract-type input:checked+span::after {content:""; display:block; position:absolute; left:5px; top:7px; width:8px; height:8px; background:#476ab4; border-radius:50%}
+.lk-report-form-item-contract-info {margin:22px 0 20px 0}
+.lk-report-form-item-contract-info::after {content:""; display:block; clear:both}
+.lk-report-form-item-contract-field {float:left; margin:0 0 0 10px; width:176px}
+.lk-report-form-item-contract-field:first-child {margin:0}
+.lk-report-form-item-contract-field-label {font-weight:normal; font-size:11px; line-height:17px; color:#060606; padding:0 0 7px 0}
+.lk-report-form-item-contract-field-input input {display:block; vertical-align:top; box-sizing:border-box; margin:0; padding:5px 9px; outline:none; width:100%; height:32px; border:1px solid #cdd8ec; -webkit-appearance:none; color:#000; font:300 13px/20px Roboto, sans-serif; border-radius:0}
+
+.lk-report-form-window {position:fixed; z-index:990; top:0; right:100px; width:300px; padding:10px 20px 20px 20px; border:1px solid #dfdfdf; background:#fff; box-shadow:4px 4px 40px rgba(0, 0, 0, 0.1)}
+.lk-report-form-window.open {width:400px}
+.lk-report-form-window-month {font-weight:300; font-size:16px; line-height:19px; color:#404040}
+.lk-report-form-window-month span {font-weight:normal; color:#000}
+.lk-report-form-window-summ {margin:12px 0 0 0; border-top:1px solid #c4c4c4; padding:12px 0 0 0; font-size:16px; line-height:19px; font-weight:300; color:#404040; position:relative}
+.lk-report-form-window-summ strong {font-weight:normal; color:#000}
+.lk-report-form-window-detail-link {display:block; position:absolute; right:-6px; top:2px; width:37px; height:37px}
+.lk-report-form-window-detail-link svg {display:block}
+.lk-report-form-window-detail-link circle {fill:#f4f4f4; transition:all 0.3s 0.02s ease}
+.lk-report-form-window-detail-link:hover circle {fill:#1c48a3}
+.lk-report-form-window-detail-link rect {fill:#1c48a3; transition:all 0.3s 0.02s ease}
+.lk-report-form-window.open .lk-report-form-window-detail-link rect+rect {display:none}
+.lk-report-form-window-detail-link:hover rect {fill:#fff}
+.lk-report-form-window-detail {display:none; white-space:nowrap; font-size:14px; line-height:20px}
+.lk-report-form-window-detail-group {border-top:1px solid #d9d9d9; margin:16px 0 0 0; padding:11px 0 0 0}
+.lk-report-form-window-detail-group-title {position:relative; overflow:hidden; text-overflow:ellipsis; font-weight:normal; color:#000}
+.lk-report-form-window-detail-subgroup {margin:8px 0 0 0}
+.lk-report-form-window-detail-subgroup+.lk-report-form-window-detail-subgroup {margin:12px 0 0 0}
+.lk-report-form-window-detail-subgroup-title {position:relative; overflow:hidden; text-overflow:ellipsis; font-weight:300; color:#404040}
+.lk-report-form-window-detail-subgroup-summ {margin:8px 0 0 0; font-weight:500; color:#404040}
+.lk-report-form-window-detail-group-summ {margin:8px 0 0 0; font-weight:500; color:#404040}
+
+.lk-report-form-templates {display:none}

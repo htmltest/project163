@@ -1,0 +1,116 @@
+.wrap {
+	width: 980px;
+	}
+
+.search.open{
+	width: 500px;
+	}
+
+.nav_top > ul > li {
+	padding: 0 17px 0 16px;
+	}
+
+.nav_top > ul > li:first-child {
+	padding-left: 0;
+	}
+
+.nav_top > ul > li:last-child {
+	padding-right: 0;
+	}
+
+.nav_top > ul > li > a {
+	font-size: 15px;
+	}
+
+.nav_top > ul > li.sub_nav > a:before {
+	right: -12px;
+	}
+
+.nav_top_sub ul {
+	width: 300px;
+	padding: 0 26px 0 0;
+	}
+
+.home_top {
+	padding: 220px 0 100px 0;
+	}
+
+
+.plans{
+	height: 546px;
+	padding: 78px 0 0 0;
+	background-size: 100% 624px;
+	}
+
+.plan {
+	transform: translateX(-50%);
+	}
+
+.plan1 {
+	left: 16.5%;
+	}
+
+.plan2 {
+	left: 48%;
+	}
+
+.plan3 {
+	left: 90%;
+	}
+
+.plan_d {
+	transform: translateX(-50%);
+	}
+
+.plan_d1 {
+	left: 16.5%;
+	}
+
+.plan_d2 {
+	left: 48%;
+	}
+
+.plan_d3 {
+	left: 90%;
+	}
+
+
+.tipes {
+	padding: 70px 0;
+	}
+
+.tipe {
+	width: 300px;
+	padding: 216px 8px 0 8px;
+	margin: 0 10px 0 0;
+	}
+
+.tipe3 {
+	margin: 0;
+	}
+
+
+.home_tab {
+	padding: 70px 0;
+	}
+
+
+#content {
+	padding: 35px 0;
+	}
+
+
+.reg_form:before {
+	width: 144px;
+	left: -151px;
+	}
+
+.copy{
+	width: 210px;
+	padding: 13px 28px 0 15px;
+	}
+
+.nav_bot{
+	width: 200px;
+	padding: 10px 0 0 20px;
+	}
