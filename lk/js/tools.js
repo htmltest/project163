@@ -4,8 +4,6 @@ $(document).ready(function() {
         axis: 'y'
     });
 
-    $('.lk-report-form-item-contract-type input').styler('destroy');
-
     $('.lk-report-form-window-detail-link').click(function(e) {
         $('.lk-report-form-window').toggleClass('open');
         $('.lk-report-form-window-detail').slideToggle();

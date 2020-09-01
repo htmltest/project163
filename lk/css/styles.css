@@ -1,7 +1,12 @@
 .wrap_in {padding:0 0 272px 0}
 footer {margin-top:-272px}
 
-.lk {position:relatve; background:#fff; min-height:calc(100vh - 189px - 272px)}
+@media screen and (max-width:759px) {
+    .wrap_in {padding:0}
+    footer {margin-top:0}
+}
+
+.lk {position:relatve; background:#fff; min-height:calc(100vh - 203px - 272px)}
 .lk *,
 .lk *::before,
 .lk *::after {outline:none; box-sizing:border-box; text-align:left}
@@ -14,7 +19,7 @@ footer {margin-top:-272px}
 .lk-btn-border:hover {background:#dde4f1; color:#4e4e4e; text-decoration:none}
 .lk-btn-border:active {background:#fff; color:#4e4e4e; text-decoration:none}
 
-.lk-side {position:absolute; left:0; top:189px; bottom:0; width:62px; overflow:hidden; z-index:100; border-right:1px solid #e3e3e3; background:#fff; transition:all 0.25s cubic-bezier(0.4, 0, 0.2, 1)}
+.lk-side {position:absolute; left:0; top:203px; bottom:0; width:62px; overflow:hidden; z-index:100; border-right:1px solid #e3e3e3; background:#fff; transition:all 0.25s cubic-bezier(0.4, 0, 0.2, 1)}
 .lk-side:hover {width:271px; box-shadow:0px 4px 30px rgba(66, 66, 66, 0.15)}
 
 .lk-side-menu {position:absolute; left:0; top:0; bottom:0; right:0; white-space:nowrap; border-top:1px solid #e3e3e3; overflow:auto}
