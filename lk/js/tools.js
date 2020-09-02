@@ -35,7 +35,8 @@ $(document).ready(function() {
     $('.lk-report-form-item-btn-add a').click(function(e) {
         var curTemplate = $(this).attr('data-template');
         var curItems = $(this).parents().filter('.lk-report-form-subgroup').find('.lk-report-form-items');
-        curItems.append($('.lk-report-form-template[data-id="' + curTemplate + '"]').html());
+        var newHTML = $('.lk-report-form-template[data-id="' + curTemplate + '"]').html();
+        curItems.append(newHTML.replace(/_VAR_NAME_/g, $(this).attr('data-var-name')));
         calcReportForm();
         e.preventDefault();
     });
@@ -61,6 +62,10 @@ $(document).ready(function() {
         }
         calcReportForm();
     });
+    
+    if ($('.lk-report-form').length > 0) {
+        calcReportForm();
+    }
 
 });
 
