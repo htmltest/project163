@@ -6,7 +6,6 @@ $(document).ready(function() {
 
     $('.lk-report-form-window-detail-link').click(function(e) {
         $('.lk-report-form-window').toggleClass('open');
-        $('.lk-report-form-window-detail').slideToggle();
         e.preventDefault();
     });
 
@@ -36,7 +35,15 @@ $(document).ready(function() {
         var curTemplate = $(this).attr('data-template');
         var curItems = $(this).parents().filter('.lk-report-form-subgroup').find('.lk-report-form-items');
         var newHTML = $('.lk-report-form-template[data-id="' + curTemplate + '"]').html();
-        curItems.append(newHTML.replace(/_VAR_NAME_/g, $(this).attr('data-var-name')));
+        var curTime = +new Date;
+        curItems.append(newHTML.replace(/_VAR_NAME_/g, $(this).attr('data-var-name')).replace(/_VAR_ID_/g, curTime));
+
+        curItems.find('.lk-report-form-input-date input').each(function() {
+            if (!$(this).hasClass('inputDate')) {
+                initInputDate($(this));
+            }
+        });
+
         calcReportForm();
         e.preventDefault();
     });
@@ -62,10 +69,84 @@ $(document).ready(function() {
         }
         calcReportForm();
     });
-    
+
     if ($('.lk-report-form').length > 0) {
         calcReportForm();
     }
+
+    $.validator.addMethod('inputDate',
+        function(curDate, element) {
+            if (this.optional(element) && curDate == '') {
+                return true;
+            } else {
+                if (curDate.match(/^[0-9]{2}\.[0-9]{2}\.[0-9]{4}$/)) {
+                    var userDate = new Date(curDate.substr(6, 4), Number(curDate.substr(3, 2)) - 1, Number(curDate.substr(0, 2)));
+                    if ($(element).attr('min')) {
+                        var minDateStr = $(element).attr('min');
+                        var minDate = new Date(minDateStr.substr(6, 4), Number(minDateStr.substr(3, 2)) - 1, Number(minDateStr.substr(0, 2)));
+                        if (userDate < minDate) {
+                            $.validator.messages['inputDate'] = 'Минимальная дата - ' + minDateStr;
+                            return false;
+                        }
+                    }
+                    if ($(element).attr('max')) {
+                        var maxDateStr = $(element).attr('max');
+                        var maxDate = new Date(maxDateStr.substr(6, 4), Number(maxDateStr.substr(3, 2)) - 1, Number(maxDateStr.substr(0, 2)));
+                        if (userDate > maxDate) {
+                            $.validator.messages['inputDate'] = 'Максимальная дата - ' + maxDateStr;
+                            return false;
+                        }
+                    }
+                    return true;
+                } else {
+                    $.validator.messages['inputDate'] = 'Дата введена некорректно';
+                    return false;
+                }
+            }
+        },
+        ''
+    );
+
+    $.validator.addMethod('requiredGroup',
+        function(value, element) {
+            var curRow = $(element).parents().filter('.lk-report-form-item-row');
+            var result = false;
+            curRow.find('.requiredGroup').each(function() {
+                if ($(this).val() != '') {
+                    result = true;
+                }
+            });
+            if (result) {
+                curRow.find('.requiredGroup').removeClass('error').parent().find('label.error').remove();
+            } else {
+                curRow.find('.requiredGroup').addClass('error').parent().find('label.error').remove();
+                curRow.find('.requiredGroup').each(function() {
+                    $(this).parent().append('<label class="error">обязательное поле</label>');
+                });
+            }
+            return result;
+        },
+        'обязательное поле'
+    );
+
+    $('form').each(function() {
+        initForm($(this));
+    });
+
+    $('body').on('click', '.lk-report-form-window-detail-group-title', function(e) {
+        var groupID = Number($(this).attr('data-groupid'));
+        $('html, body').animate({'scrollTop': $('.lk-report-form-group').eq(groupID).find('.lk-report-form-group-title').offset().top});
+    });
+
+    $('body').on('click', '.lk-report-form-window-detail-subgroup-title', function(e) {
+        var groupID = Number($(this).attr('data-groupid'));
+        var subgroupID = Number($(this).attr('data-subgroupid'));
+        $('html, body').animate({'scrollTop': $('.lk-report-form-group').eq(groupID).find('.lk-report-form-subgroup').eq(subgroupID).find('.lk-report-form-subgroup-title').offset().top});
+    });
+
+    $('.lk-report-form-window-detail-inner').mCustomScrollbar({
+        axis: 'y'
+    });
 
 });
 
@@ -103,16 +184,16 @@ function calcReportForm() {
     $('.lk-report-form-summ span').html(String(allSumm.toFixed(2)).replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 '));
     $('.lk-report-form-window-summ span').html(String(allSumm.toFixed(2)).replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 '));
 
-    $('.lk-report-form-window-detail').html('');
+    $('.lk-report-form-window-detail-inner').html('');
     for (var i = 0; i < $('.lk-report-form-group').length; i++) {
         var curGroup = $('.lk-report-form-group').eq(i);
         var windowHTML =    '<div class="lk-report-form-window-detail-group">' +
-                                '<div class="lk-report-form-window-detail-group-title">' + curGroup.find('.lk-report-form-group-title').html() + '</div>';
+                                '<div class="lk-report-form-window-detail-group-title" data-groupid="' + i + '">' + curGroup.find('.lk-report-form-group-title').html() + '</div>';
         if (curGroup.find('.lk-report-form-subgroup-title').length > 0) {
             for (var j = 0; j < curGroup.find('.lk-report-form-subgroup').length; j++) {
                 var curSubGroup = curGroup.find('.lk-report-form-subgroup').eq(j);
                 windowHTML +=   '<div class="lk-report-form-window-detail-subgroup">' +
-                                    '<div class="lk-report-form-window-detail-subgroup-title">' + curSubGroup.find('.lk-report-form-subgroup-title').html() + '</div>' +
+                                    '<div class="lk-report-form-window-detail-subgroup-title" data-groupid="' + i + '" data-subgroupid="' + j + '">' + curSubGroup.find('.lk-report-form-subgroup-title').html() + '</div>' +
                                     '<div class="lk-report-form-window-detail-subgroup-summ">' + curSubGroup.find('.lk-report-form-subgroup-summ').html() + ' руб.</div>' +
                                 '</div>';
             }
@@ -120,16 +201,128 @@ function calcReportForm() {
             windowHTML +=       '<div class="lk-report-form-window-detail-group-summ">' + curGroup.find('.lk-report-form-group-summ').html() + ' руб.</div>';
         }
         windowHTML +=       '</div>';
-        $('.lk-report-form-window-detail').append(windowHTML);
+        $('.lk-report-form-window-detail-inner').append(windowHTML);
     }
+    
+    $('.lk-report-form-subgroup').each(function() {
+        var curGroup = $(this);
+        if (curGroup.find('.lk-report-form-item').length == 0) {
+            curGroup.find('.lk-report-form-item-headers').removeClass('visible');
+        } else {
+            curGroup.find('.lk-report-form-item-headers').addClass('visible');
+        }
+    });
 }
 
 $(window).on('load resize scroll', function() {
     $('.lk-report-form-window').each(function() {
-        if ($(window).scrollTop() > $('header').outerHeight() + 50) {
-            $('.lk-report-form-window').css({'top': 50});
+        if ($(window).scrollTop() > $('header').outerHeight()) {
+            $('.lk-report-form-window').css({'top': 15});
         } else {
-            $('.lk-report-form-window').css({'top': $('header').outerHeight() + 50 - $(window).scrollTop()});
+            $('.lk-report-form-window').css({'top': $('header').outerHeight() + 15 - $(window).scrollTop()});
         }
     });
 });
+
+function initInputDate(field) {
+    field.mask('00.00.0000');
+    field.attr('autocomplete', 'off');
+    field.addClass('inputDate');
+
+    field.on('keyup', function() {
+        var curValue = $(this).val();
+        if (curValue.match(/^[0-9]{2}\.[0-9]{2}\.[0-9]{4}$/)) {
+            var isCorrectDate = true;
+            var userDate = new Date(curValue.substr(6, 4), Number(curValue.substr(3, 2)) - 1, Number(curValue.substr(0, 2)));
+            if ($(this).attr('min')) {
+                var minDateStr = $(this).attr('min');
+                var minDate = new Date(minDateStr.substr(6, 4), Number(minDateStr.substr(3, 2)) - 1, Number(minDateStr.substr(0, 2)));
+                if (userDate < minDate) {
+                    isCorrectDate = false;
+                }
+            }
+            if ($(this).attr('max')) {
+                var maxDateStr = $(this).attr('max');
+                var maxDate = new Date(maxDateStr.substr(6, 4), Number(maxDateStr.substr(3, 2)) - 1, Number(maxDateStr.substr(0, 2)));
+                if (userDate > maxDate) {
+                    isCorrectDate = false;
+                }
+            }
+            if (isCorrectDate) {
+                var myDatepicker = $(this).data('datepicker');
+                if (myDatepicker) {
+                    var curValueArray = curValue.split('.');
+                    myDatepicker.selectDate(new Date(Number(curValueArray[2]), Number(curValueArray[1]) - 1, Number(curValueArray[0])));
+                    myDatepicker.show();
+                    $(this).focus();
+                }
+            } else {
+                $(this).addClass('error');
+                return false;
+            }
+        }
+    });
+
+    field.each(function() {
+        var minDateText = $(this).attr('min');
+        var minDate = null;
+        if (typeof (minDateText) != 'undefined') {
+            var minDateArray = minDateText.split('.');
+            minDate = new Date(Number(minDateArray[2]), Number(minDateArray[1]) - 1, Number(minDateArray[0]));
+        }
+        var maxDateText = $(this).attr('max');
+        var maxDate = null;
+        if (typeof (maxDateText) != 'undefined') {
+            var maxDateArray = maxDateText.split('.');
+            maxDate = new Date(Number(maxDateArray[2]), Number(maxDateArray[1]) - 1, Number(maxDateArray[0]));
+        }
+        if ($(this).hasClass('maxDate1Year')) {
+            var curDate = new Date();
+            curDate.setFullYear(curDate.getFullYear() + 1);
+            curDate.setDate(curDate.getDate() - 1);
+            maxDate = curDate;
+            var maxDay = curDate.getDate();
+            if (maxDay < 10) {
+                maxDay = '0' + maxDay
+            }
+            var maxMonth = curDate.getMonth() + 1;
+            if (maxMonth < 10) {
+                maxMonth = '0' + maxMonth
+            }
+            $(this).attr('max', maxDay + '.' + maxMonth + '.' + curDate.getFullYear());
+        }
+        var startDate = new Date();
+        if (typeof ($(this).attr('value')) != 'undefined') {
+            var curValue = $(this).val();
+            if (curValue != '') {
+                var startDateArray = curValue.split('.');
+                startDate = new Date(Number(startDateArray[2]), Number(startDateArray[1]) - 1 , Number(startDateArray[0]));
+            }
+        }
+        $(this).datepicker({
+            language: 'ru',
+            minDate: minDate,
+            maxDate: maxDate,
+            startDate: startDate,
+            toggleSelected: false
+        });
+        if (typeof ($(this).attr('value')) != 'undefined') {
+            var curValue = $(this).val();
+            if (curValue != '') {
+                var startDateArray = curValue.split('.');
+                startDate = new Date(Number(startDateArray[2]), Number(startDateArray[1]) - 1 , Number(startDateArray[0]));
+                $(this).data('datepicker').selectDate(startDate);
+            }
+        }
+    });
+}
+
+function initForm(curForm) {
+    curForm.find('.lk-report-form-input-date input').each(function() {
+        initInputDate($(this));
+    });
+
+    curForm.validate({
+        ignore: ''
+    });
+}

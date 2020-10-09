@@ -2,7 +2,7 @@
 <html lang="ru">
     <head>
         <meta charset="utf-8" />
-        <title>Форма отчета</title>
+        <title>НЦМУ ЛК</title>
 
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700,700i,900&amp;subset=cyrillic,cyrillic-ext" />
         <link rel="icon" type="image/png" href="favicon.ico" />
@@ -10,6 +10,7 @@
     	<link rel="stylesheet" href="lk/css/page.css" />
     	<link rel="stylesheet" href="lk/js/mcustomscrollbar/jquery.mCustomScrollbar.css" />
         <link rel="stylesheet" href="lk/css/styles.css" />
+        <link rel="stylesheet" href="lk/js/air-datepicker/datepicker.css" />
 
         <meta name="viewport" content="width=device-width" />
     </head>
@@ -111,7 +112,8 @@
                                 <li><a href="#"><div class="lk-side-menu-icon"><img src="lk/images/side-menu-01.svg" alt="" /></div>Математические НЦМУ</a></li>
                                 <li><a href="#"><div class="lk-side-menu-icon"><img src="lk/images/side-menu-02.svg" alt="" /></div>Геномные НЦМУ</a></li>
                                 <li><a href="#"><div class="lk-side-menu-icon"><img src="lk/images/side-menu-03.svg" alt="" /></div>НЦМУ по приоритетам</a></li>
-                                <li class="sep"><a href="#"><div class="lk-side-menu-icon"><img src="lk/images/side-menu-04.svg" alt="" /></div>Заявки</a></li>
+                                <li class="sep"><a href="#"><div class="lk-side-menu-icon"><img src="lk/images/side-menu-11.svg" alt="" /></div>Профиль</a></li>
+                                <li><a href="#"><div class="lk-side-menu-icon"><img src="lk/images/side-menu-04.svg" alt="" /></div>Заявки</a></li>
                                 <li class="active"><a href="#"><div class="lk-side-menu-icon"><img src="lk/images/side-menu-05.svg" alt="" /></div>Отчеты</a></li>
                                 <li><a href="#"><div class="lk-side-menu-icon"><img src="lk/images/side-menu-06.svg" alt="" /></div>Решения</a></li>
                                 <li><a href="#"><div class="lk-side-menu-icon"><img src="lk/images/side-menu-07.svg" alt="" /></div>Оценки</a></li>
@@ -172,7 +174,7 @@
                                                     <div class="lk-report-form-item-header-title">Внебюджетные средства</div>
                                                     <div class="lk-report-form-item-header-text">прошлого года</div>
                                                 </div>
-                                                <div class="lk-report-form-item-header lk-report-form-item-header-sep">
+                                                <div class="lk-report-form-item-header lk-report-form-item-header-summ lk-report-form-item-header-sep">
                                                     <div class="lk-report-form-item-header-title">Итого</div>
                                                 </div>
                                             </div>
@@ -182,13 +184,13 @@
                                                     <div class="lk-report-form-item-drag"><svg width="12" height="9" viewBox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="12" height="1" /><rect y="4" width="12" height="1" /><rect y="8" width="12" height="1" /></svg></div>
                                                     <div class="lk-report-form-item-number"></div>
                                                     <div class="lk-report-form-item-row">
-                                                        <div class="lk-report-form-item-field"><input type="text" name="salary['name'][]" value="Название" /></div>
-                                                        <div class="lk-report-form-item-field lk-report-form-item-field-sep"><input type="text" name="salary['doc'][]" value="Документ" /></div>
-                                                        <div class="lk-report-form-item-field lk-report-form-item-field-sep"><input type="text" name="salary['grant_funds'][]" value="100" class="lk-report-form-item-cost" /></div>
-                                                        <div class="lk-report-form-item-field"><input type="text" name="salary['grant_funds_prev'][]" value="200" class="lk-report-form-item-cost" /></div>
-                                                        <div class="lk-report-form-item-field"><input type="text" name="salary['budget_funds'][]" value="300" class="lk-report-form-item-cost" /></div>
-                                                        <div class="lk-report-form-item-field"><input type="text" name="salary['budget_funds_prev'][]" value="400" class="lk-report-form-item-cost" /></div>
-                                                        <div class="lk-report-form-item-field lk-report-form-item-field-sep"><div class="lk-report-form-item-summ"></div></div>
+                                                        <div class="lk-report-form-item-field"><input type="text" name="salary['0']['name']" value="Название" class="required" /></div>
+                                                        <div class="lk-report-form-item-field lk-report-form-item-field-sep"><input type="text" name="salary['0']['doc']" value="Документ" class="required" /></div>
+                                                        <div class="lk-report-form-item-field lk-report-form-item-field-sep"><input type="text" name="salary['0']['grant_funds']" value="100" class="lk-report-form-item-cost requiredGroup" /></div>
+                                                        <div class="lk-report-form-item-field"><input type="text" name="salary['0']['grant_funds_prev']" value="200" class="lk-report-form-item-cost requiredGroup" /></div>
+                                                        <div class="lk-report-form-item-field"><input type="text" name="salary['0']['budget_funds']" value="300" class="lk-report-form-item-cost requiredGroup" /></div>
+                                                        <div class="lk-report-form-item-field"><input type="text" name="salary['0']['budget_funds_prev']" value="400" class="lk-report-form-item-cost requiredGroup" /></div>
+                                                        <div class="lk-report-form-item-field lk-report-form-item-field-summ lk-report-form-item-field-sep"><div class="lk-report-form-item-summ"></div></div>
                                                     </div>
                                                     <a href="#" class="lk-report-form-item-remove"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="10.9746" y="3.79883" width="1.44975" height="10.1482" transform="rotate(45 10.9746 3.79883)" /><rect x="12" y="10.9746" width="1.44975" height="10.1482" transform="rotate(135 12 10.9746)" /></svg></a>
                                                 </div>
@@ -231,7 +233,7 @@
                                                     <div class="lk-report-form-item-header-title">Внебюджетные средства</div>
                                                     <div class="lk-report-form-item-header-text">прошлого года</div>
                                                 </div>
-                                                <div class="lk-report-form-item-header lk-report-form-item-header-sep">
+                                                <div class="lk-report-form-item-header lk-report-form-item-header-summ lk-report-form-item-header-sep">
                                                     <div class="lk-report-form-item-header-title">Итого</div>
                                                 </div>
                                             </div>
@@ -241,19 +243,19 @@
                                                     <div class="lk-report-form-item-drag"><svg width="12" height="9" viewBox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="12" height="1" /><rect y="4" width="12" height="1" /><rect y="8" width="12" height="1" /></svg></div>
                                                     <div class="lk-report-form-item-number"></div>
                                                     <div class="lk-report-form-item-row">
-                                                        <div class="lk-report-form-item-field"><input type="text" name="salary2['name'][]" value="Название" /></div>
-                                                        <div class="lk-report-form-item-field lk-report-form-item-field-sep"><input type="text" name="salary2['doc'][]" value="Документ" /></div>
-                                                        <div class="lk-report-form-item-field lk-report-form-item-field-sep"><input type="text" name="salary2['grant_funds'][]" value="100" class="lk-report-form-item-cost" /></div>
-                                                        <div class="lk-report-form-item-field"><input type="text" name="salary2['grant_funds_prev'][]" value="200" class="lk-report-form-item-cost" /></div>
-                                                        <div class="lk-report-form-item-field"><input type="text" name="salary2['budget_funds'][]" value="300" class="lk-report-form-item-cost" /></div>
-                                                        <div class="lk-report-form-item-field"><input type="text" name="salary2['budget_funds_prev'][]" value="400" class="lk-report-form-item-cost" /></div>
-                                                        <div class="lk-report-form-item-field lk-report-form-item-field-sep"><div class="lk-report-form-item-summ"></div></div>
+                                                        <div class="lk-report-form-item-field"><input type="text" name="salary['1']['name']" value="Название" class="required" /></div>
+                                                        <div class="lk-report-form-item-field lk-report-form-item-field-sep"><input type="text" name="salary['1']['doc']" value="Документ" class="required" /></div>
+                                                        <div class="lk-report-form-item-field lk-report-form-item-field-sep"><input type="text" name="salary['1']['grant_funds']" value="100" class="lk-report-form-item-cost requiredGroup" /></div>
+                                                        <div class="lk-report-form-item-field"><input type="text" name="salary['1']['grant_funds_prev']" value="200" class="lk-report-form-item-cost requiredGroup" /></div>
+                                                        <div class="lk-report-form-item-field"><input type="text" name="salary['1']['budget_funds']" value="300" class="lk-report-form-item-cost requiredGroup" /></div>
+                                                        <div class="lk-report-form-item-field"><input type="text" name="salary['1']['budget_funds_prev']" value="400" class="lk-report-form-item-cost requiredGroup" /></div>
+                                                        <div class="lk-report-form-item-field lk-report-form-item-field-summ lk-report-form-item-field-sep"><div class="lk-report-form-item-summ"></div></div>
                                                     </div>
                                                     <a href="#" class="lk-report-form-item-remove"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="10.9746" y="3.79883" width="1.44975" height="10.1482" transform="rotate(45 10.9746 3.79883)" /><rect x="12" y="10.9746" width="1.44975" height="10.1482" transform="rotate(135 12 10.9746)" /></svg></a>
                                                 </div>
                                             </div>
 
-                                            <div class="lk-report-form-item-btn-add"><a href="#" data-template="1" data-var-name="salary2"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="14" y="6" width="2" height="14" transform="rotate(90 14 6)" /><rect x="8.00195" y="14" width="2" height="14" transform="rotate(-180 8.00195 14)" /></svg>добавить статью расходов</a></div>
+                                            <div class="lk-report-form-item-btn-add"><a href="#" data-template="1" data-var-name="salary"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="14" y="6" width="2" height="14" transform="rotate(90 14 6)" /><rect x="8.00195" y="14" width="2" height="14" transform="rotate(-180 8.00195 14)" /></svg>добавить статью расходов</a></div>
                                         </div>
                                         <!-- lk report form subgroup END-->
 
@@ -265,7 +267,11 @@
                                             </div>
 
                                             <div class="lk-report-form-item-headers">
-                                                <div class="lk-report-form-item-header">
+                                                <div class="lk-report-form-item-header lk-report-form-item-header-wide">
+                                                    <div class="lk-report-form-item-header-title">Основание</div>
+                                                    <div class="lk-report-form-item-header-text">Платежный документ</div>
+                                                </div>
+                                                <div class="lk-report-form-item-header lk-report-form-item-header-sep">
                                                     <div class="lk-report-form-item-header-title">Средства гранта</div>
                                                     <div class="lk-report-form-item-header-text">этого года, руб.</div>
                                                 </div>
@@ -281,20 +287,20 @@
                                                     <div class="lk-report-form-item-header-title">Внебюджетные средства</div>
                                                     <div class="lk-report-form-item-header-text">прошлого года, руб.</div>
                                                 </div>
-                                                <div class="lk-report-form-item-header">
-                                                    <div class="lk-report-form-item-header-title">Платежный документ</div>
-                                                    <div class="lk-report-form-item-header-text">&nbsp;</div>
+                                                <div class="lk-report-form-item-header lk-report-form-item-header-summ lk-report-form-item-header-sep">
+                                                    <div class="lk-report-form-item-header-title">Итого</div>
                                                 </div>
                                             </div>
 
                                             <div class="lk-report-form-items">
                                                 <div class="lk-report-form-item">
                                                     <div class="lk-report-form-item-row">
-                                                        <div class="lk-report-form-item-field"><input type="text" name="salary4['grant_funds'][]" value="" class="lk-report-form-item-cost" /></div>
-                                                        <div class="lk-report-form-item-field"><input type="text" name="salary4['grant_funds_prev'][]" value="" class="lk-report-form-item-cost" /></div>
-                                                        <div class="lk-report-form-item-field"><input type="text" name="salary4['budget_funds'][]" value="" class="lk-report-form-item-cost" /></div>
-                                                        <div class="lk-report-form-item-field"><input type="text" name="salary4['budget_funds_prev'][]" value="" class="lk-report-form-item-cost" /></div>
-                                                        <div class="lk-report-form-item-field"><input type="text" name="salary4['doc'][]" value="" /></div>
+                                                        <div class="lk-report-form-item-field lk-report-form-item-field-wide"><input type="text" name="salary['2']['doc']" value="" class="required" /></div>
+                                                        <div class="lk-report-form-item-field lk-report-form-item-field-sep"><input type="text" name="salary['2']['grant_funds']" value="" class="lk-report-form-item-cost requiredGroup" /></div>
+                                                        <div class="lk-report-form-item-field"><input type="text" name="salary['2']['grant_funds_prev']" value="" class="lk-report-form-item-cost requiredGroup" /></div>
+                                                        <div class="lk-report-form-item-field"><input type="text" name="salary['2']['budget_funds']" value="" class="lk-report-form-item-cost requiredGroup" /></div>
+                                                        <div class="lk-report-form-item-field"><input type="text" name="salary['2']['budget_funds_prev']" value="" class="lk-report-form-item-cost requiredGroup" /></div>
+                                                        <div class="lk-report-form-item-field lk-report-form-item-field-summ lk-report-form-item-field-sep"><div class="lk-report-form-item-summ"></div></div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -341,7 +347,7 @@
                                                     <div class="lk-report-form-item-header-title">Внебюджетные средства</div>
                                                     <div class="lk-report-form-item-header-text">прошлого года</div>
                                                 </div>
-                                                <div class="lk-report-form-item-header lk-report-form-item-header-sep">
+                                                <div class="lk-report-form-item-header lk-report-form-item-header-summ lk-report-form-item-header-sep">
                                                     <div class="lk-report-form-item-header-title">Итого</div>
                                                 </div>
                                             </div>
@@ -351,47 +357,515 @@
                                                     <div class="lk-report-form-item-drag"><svg width="12" height="9" viewBox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="12" height="1" /><rect y="4" width="12" height="1" /><rect y="8" width="12" height="1" /></svg></div>
                                                     <div class="lk-report-form-item-number"></div>
                                                     <div class="lk-report-form-item-row">
-                                                        <div class="lk-report-form-item-field"><input type="text" name="salary3['name'][]" value="Название" /></div>
-                                                        <div class="lk-report-form-item-field lk-report-form-item-field-sep"><input type="text" name="salary3['doc'][]" value="Документ" /></div>
-                                                        <div class="lk-report-form-item-field lk-report-form-item-field-sep"><input type="text" name="salary3['grant_funds'][]" value="500" class="lk-report-form-item-cost" /></div>
-                                                        <div class="lk-report-form-item-field"><input type="text" name="salary3['grant_funds_prev'][]" value="400" class="lk-report-form-item-cost" /></div>
-                                                        <div class="lk-report-form-item-field"><input type="text" name="salary3['budget_funds'][]" value="300" class="lk-report-form-item-cost" /></div>
-                                                        <div class="lk-report-form-item-field"><input type="text" name="salary3['budget_funds_prev'][]" value="200" class="lk-report-form-item-cost" /></div>
+                                                        <div class="lk-report-form-item-field"><input type="text" name="salary['4']['name']" value="Название" class="required" /></div>
+                                                        <div class="lk-report-form-item-field lk-report-form-item-field-sep"><input type="text" name="salary['4']['doc']" value="Документ" class="required" /></div>
+                                                        <div class="lk-report-form-item-field lk-report-form-item-field-sep"><input type="text" name="salary['4']['grant_funds']" value="500" class="lk-report-form-item-cost requiredGroup" /></div>
+                                                        <div class="lk-report-form-item-field"><input type="text" name="salary['4']['grant_funds_prev']" value="400" class="lk-report-form-item-cost requiredGroup" /></div>
+                                                        <div class="lk-report-form-item-field"><input type="text" name="salary['4']['budget_funds']" value="300" class="lk-report-form-item-cost requiredGroup" /></div>
+                                                        <div class="lk-report-form-item-field"><input type="text" name="salary['4']['budget_funds_prev']" value="200" class="lk-report-form-item-cost requiredGroup" /></div>
                                                         <div class="lk-report-form-item-field lk-report-form-item-field-sep"><div class="lk-report-form-item-summ"></div></div>
                                                     </div>
                                                     <a href="#" class="lk-report-form-item-remove"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="10.9746" y="3.79883" width="1.44975" height="10.1482" transform="rotate(45 10.9746 3.79883)" /><rect x="12" y="10.9746" width="1.44975" height="10.1482" transform="rotate(135 12 10.9746)" /></svg></a>
                                                     <div class="lk-report-form-item-contract">
                                                         <div class="lk-report-form-item-contract-types">
-                                                            <div class="lk-report-form-item-contract-type"><label><input type="radio" name="salary3['contract_type'][01]" value="now" checked="checked" /><span>Контракт этого периода</span></label></div>
-                                                            <div class="lk-report-form-item-contract-type"><label><input type="radio" name="salary3['contract_type'][01]" value="past" /><span>Контракт прошедшего периода</span></label></div>
+                                                            <div class="lk-report-form-item-contract-type"><label><input type="radio" name="salary['4']['contract_type'][01]" value="now" checked="checked" /><span>Контракт этого периода</span></label></div>
+                                                            <div class="lk-report-form-item-contract-type"><label><input type="radio" name="salary['4']['contract_type'][01]" value="past" /><span>Контракт прошедшего периода</span></label></div>
                                                         </div>
                                                         <div class="lk-report-form-item-contract-info">
                                                             <div class="lk-report-form-item-contract-field">
                                                                 <div class="lk-report-form-item-contract-field-label">Номер закупки</div>
-                                                                <div class="lk-report-form-item-contract-field-input"><input type="text" name="salary3['contract_info_buy'][]" value="Закупка" /></div>
+                                                                <div class="lk-report-form-item-contract-field-input"><input type="text" name="salary['4']['contract_info_buy']" value="Закупка" class="required" /></div>
                                                             </div>
                                                             <div class="lk-report-form-item-contract-field">
                                                                 <div class="lk-report-form-item-contract-field-label">Номер договора</div>
-                                                                <div class="lk-report-form-item-contract-field-input"><input type="text" name="salary3['contract_info_number'][]" value="Договор" /></div>
+                                                                <div class="lk-report-form-item-contract-field-input"><input type="text" name="salary['4']['contract_info_number']" value="Договор" class="required" /></div>
                                                             </div>
                                                             <div class="lk-report-form-item-contract-field">
                                                                 <div class="lk-report-form-item-contract-field-label">Дата заключения договора</div>
-                                                                <div class="lk-report-form-item-contract-field-input"><input type="text" name="salary3['contract_info_start'][]" value="01.01.2019" /></div>
+                                                                <div class="lk-report-form-item-contract-field-input lk-report-form-input-date"><input type="text" name="salary['4']['contract_info_start']" value="01.01.2019" class="required" /></div>
                                                             </div>
                                                             <div class="lk-report-form-item-contract-field">
                                                                 <div class="lk-report-form-item-contract-field-label">Дата исполнения обязательств</div>
-                                                                <div class="lk-report-form-item-contract-field-input"><input type="text" name="salary3['contract_info_end'][]" value="01.01.2020" /></div>
+                                                                <div class="lk-report-form-item-contract-field-input lk-report-form-input-date"><input type="text" name="salary['4']['contract_info_end']" value="01.01.2020" class="required" /></div>
                                                             </div>
                                                             <div class="lk-report-form-item-contract-field">
                                                                 <div class="lk-report-form-item-contract-field-label">НМЦД, руб</div>
-                                                                <div class="lk-report-form-item-contract-field-input"><input type="text" name="salary3['contract_info_summ'][]" value="1000000" /></div>
+                                                                <div class="lk-report-form-item-contract-field-input"><input type="text" name="salary['4']['contract_info_summ']" value="1000000" class="required" /></div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
 
-                                            <div class="lk-report-form-item-btn-add"><a href="#" data-template="2" data-var-name="salary3"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="14" y="6" width="2" height="14" transform="rotate(90 14 6)" /><rect x="8.00195" y="14" width="2" height="14" transform="rotate(-180 8.00195 14)" /></svg>добавить статью расходов</a></div>
+                                            <div class="lk-report-form-item-btn-add"><a href="#" data-template="2" data-var-name="salary"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="14" y="6" width="2" height="14" transform="rotate(90 14 6)" /><rect x="8.00195" y="14" width="2" height="14" transform="rotate(-180 8.00195 14)" /></svg>добавить статью расходов</a></div>
+                                        </div>
+                                        <!-- lk report form subgroup END -->
+
+                                    </div>
+                                </div>
+                                <!-- lk report form group -->
+
+                                <!-- lk report form group -->
+                                <div class="lk-report-form-group">
+                                    <div class="lk-report-form-group-header">
+                                        <div class="lk-report-form-group-title"><span>3.</span>Расходы на приобретение материалов и комплектующих для оборудования для проведения исследований и разработки технологий и оборудования</div>
+                                        <div class="lk-report-form-group-summ"></div>
+                                    </div>
+                                    <div class="lk-report-form-subgroups">
+
+                                        <!-- lk report form subgroup -->
+                                        <div class="lk-report-form-subgroup">
+                                            <div class="lk-report-form-item-headers">
+                                                <div class="lk-report-form-item-header">
+                                                    <div class="lk-report-form-item-header-title">Основание</div>
+                                                    <div class="lk-report-form-item-header-text">ФИО, название статьи расходов и т.п</div>
+                                                </div>
+                                                <div class="lk-report-form-item-header lk-report-form-item-header-sep">
+                                                    <div class="lk-report-form-item-header-title">Основание</div>
+                                                    <div class="lk-report-form-item-header-text">Платежный документ</div>
+                                                </div>
+                                                <div class="lk-report-form-item-header lk-report-form-item-header-sep">
+                                                    <div class="lk-report-form-item-header-title">Средства гранта</div>
+                                                    <div class="lk-report-form-item-header-text">этого года</div>
+                                                </div>
+                                                <div class="lk-report-form-item-header">
+                                                    <div class="lk-report-form-item-header-title">Средства гранта</div>
+                                                    <div class="lk-report-form-item-header-text">прошлого года</div>
+                                                </div>
+                                                <div class="lk-report-form-item-header">
+                                                    <div class="lk-report-form-item-header-title">Внебюджетные средства</div>
+                                                    <div class="lk-report-form-item-header-text">этого года</div>
+                                                </div>
+                                                <div class="lk-report-form-item-header">
+                                                    <div class="lk-report-form-item-header-title">Внебюджетные средства</div>
+                                                    <div class="lk-report-form-item-header-text">прошлого года</div>
+                                                </div>
+                                                <div class="lk-report-form-item-header lk-report-form-item-header-summ lk-report-form-item-header-sep">
+                                                    <div class="lk-report-form-item-header-title">Итого</div>
+                                                </div>
+                                            </div>
+
+                                            <div class="lk-report-form-items">
+                                            </div>
+
+                                            <div class="lk-report-form-item-btn-add"><a href="#" data-template="1" data-var-name="salary"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="14" y="6" width="2" height="14" transform="rotate(90 14 6)" /><rect x="8.00195" y="14" width="2" height="14" transform="rotate(-180 8.00195 14)" /></svg>добавить статью расходов</a></div>
+
+                                        </div>
+                                        <!-- lk report form subgroup END -->
+
+                                    </div>
+                                </div>
+                                <!-- lk report form group -->
+
+                                <!-- lk report form group -->
+                                <div class="lk-report-form-group">
+                                    <div class="lk-report-form-group-header">
+                                        <div class="lk-report-form-group-title"><span>4.</span>Расходы на оплату командировок работников центра</div>
+                                        <div class="lk-report-form-group-summ"></div>
+                                    </div>
+                                    <div class="lk-report-form-subgroups">
+
+                                        <!-- lk report form subgroup -->
+                                        <div class="lk-report-form-subgroup">
+                                            <div class="lk-report-form-item-headers">
+                                                <div class="lk-report-form-item-header">
+                                                    <div class="lk-report-form-item-header-title">Основание</div>
+                                                    <div class="lk-report-form-item-header-text">ФИО, название статьи расходов и т.п</div>
+                                                </div>
+                                                <div class="lk-report-form-item-header lk-report-form-item-header-sep">
+                                                    <div class="lk-report-form-item-header-title">Основание</div>
+                                                    <div class="lk-report-form-item-header-text">Платежный документ</div>
+                                                </div>
+                                                <div class="lk-report-form-item-header lk-report-form-item-header-sep">
+                                                    <div class="lk-report-form-item-header-title">Средства гранта</div>
+                                                    <div class="lk-report-form-item-header-text">этого года</div>
+                                                </div>
+                                                <div class="lk-report-form-item-header">
+                                                    <div class="lk-report-form-item-header-title">Средства гранта</div>
+                                                    <div class="lk-report-form-item-header-text">прошлого года</div>
+                                                </div>
+                                                <div class="lk-report-form-item-header">
+                                                    <div class="lk-report-form-item-header-title">Внебюджетные средства</div>
+                                                    <div class="lk-report-form-item-header-text">этого года</div>
+                                                </div>
+                                                <div class="lk-report-form-item-header">
+                                                    <div class="lk-report-form-item-header-title">Внебюджетные средства</div>
+                                                    <div class="lk-report-form-item-header-text">прошлого года</div>
+                                                </div>
+                                                <div class="lk-report-form-item-header lk-report-form-item-header-summ lk-report-form-item-header-sep">
+                                                    <div class="lk-report-form-item-header-title">Итого</div>
+                                                </div>
+                                            </div>
+
+                                            <div class="lk-report-form-items">
+                                            </div>
+
+                                            <div class="lk-report-form-item-btn-add"><a href="#" data-template="1" data-var-name="salary"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="14" y="6" width="2" height="14" transform="rotate(90 14 6)" /><rect x="8.00195" y="14" width="2" height="14" transform="rotate(-180 8.00195 14)" /></svg>добавить статью расходов</a></div>
+
+                                        </div>
+                                        <!-- lk report form subgroup END -->
+
+                                    </div>
+                                </div>
+                                <!-- lk report form group -->
+
+                                <!-- lk report form group -->
+                                <div class="lk-report-form-group">
+                                    <div class="lk-report-form-group-header">
+                                        <div class="lk-report-form-group-title"><span>5.</span>Расходы на оплату участия работников центра в конференциях, научных семинарах,симпозиумах</div>
+                                        <div class="lk-report-form-group-summ"></div>
+                                    </div>
+                                    <div class="lk-report-form-subgroups">
+
+                                        <!-- lk report form subgroup -->
+                                        <div class="lk-report-form-subgroup">
+                                            <div class="lk-report-form-item-headers">
+                                                <div class="lk-report-form-item-header">
+                                                    <div class="lk-report-form-item-header-title">Основание</div>
+                                                    <div class="lk-report-form-item-header-text">ФИО, название статьи расходов и т.п</div>
+                                                </div>
+                                                <div class="lk-report-form-item-header lk-report-form-item-header-sep">
+                                                    <div class="lk-report-form-item-header-title">Основание</div>
+                                                    <div class="lk-report-form-item-header-text">Платежный документ</div>
+                                                </div>
+                                                <div class="lk-report-form-item-header lk-report-form-item-header-sep">
+                                                    <div class="lk-report-form-item-header-title">Средства гранта</div>
+                                                    <div class="lk-report-form-item-header-text">этого года</div>
+                                                </div>
+                                                <div class="lk-report-form-item-header">
+                                                    <div class="lk-report-form-item-header-title">Средства гранта</div>
+                                                    <div class="lk-report-form-item-header-text">прошлого года</div>
+                                                </div>
+                                                <div class="lk-report-form-item-header">
+                                                    <div class="lk-report-form-item-header-title">Внебюджетные средства</div>
+                                                    <div class="lk-report-form-item-header-text">этого года</div>
+                                                </div>
+                                                <div class="lk-report-form-item-header">
+                                                    <div class="lk-report-form-item-header-title">Внебюджетные средства</div>
+                                                    <div class="lk-report-form-item-header-text">прошлого года</div>
+                                                </div>
+                                                <div class="lk-report-form-item-header lk-report-form-item-header-summ lk-report-form-item-header-sep">
+                                                    <div class="lk-report-form-item-header-title">Итого</div>
+                                                </div>
+                                            </div>
+
+                                            <div class="lk-report-form-items">
+                                            </div>
+
+                                            <div class="lk-report-form-item-btn-add"><a href="#" data-template="1" data-var-name="salary"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="14" y="6" width="2" height="14" transform="rotate(90 14 6)" /><rect x="8.00195" y="14" width="2" height="14" transform="rotate(-180 8.00195 14)" /></svg>добавить статью расходов</a></div>
+
+                                        </div>
+                                        <!-- lk report form subgroup END -->
+
+                                    </div>
+                                </div>
+                                <!-- lk report form group -->
+
+                                <!-- lk report form group -->
+                                <div class="lk-report-form-group">
+                                    <div class="lk-report-form-group-header">
+                                        <div class="lk-report-form-group-title"><span>6.</span>Расходы на оплату организации конференций, научных семинаров, симпозиумов.</div>
+                                        <div class="lk-report-form-group-summ"></div>
+                                    </div>
+                                    <div class="lk-report-form-subgroups">
+
+                                        <!-- lk report form subgroup -->
+                                        <div class="lk-report-form-subgroup">
+                                            <div class="lk-report-form-item-headers">
+                                                <div class="lk-report-form-item-header">
+                                                    <div class="lk-report-form-item-header-title">Основание</div>
+                                                    <div class="lk-report-form-item-header-text">ФИО, название статьи расходов и т.п</div>
+                                                </div>
+                                                <div class="lk-report-form-item-header lk-report-form-item-header-sep">
+                                                    <div class="lk-report-form-item-header-title">Основание</div>
+                                                    <div class="lk-report-form-item-header-text">Платежный документ</div>
+                                                </div>
+                                                <div class="lk-report-form-item-header lk-report-form-item-header-sep">
+                                                    <div class="lk-report-form-item-header-title">Средства гранта</div>
+                                                    <div class="lk-report-form-item-header-text">этого года</div>
+                                                </div>
+                                                <div class="lk-report-form-item-header">
+                                                    <div class="lk-report-form-item-header-title">Средства гранта</div>
+                                                    <div class="lk-report-form-item-header-text">прошлого года</div>
+                                                </div>
+                                                <div class="lk-report-form-item-header">
+                                                    <div class="lk-report-form-item-header-title">Внебюджетные средства</div>
+                                                    <div class="lk-report-form-item-header-text">этого года</div>
+                                                </div>
+                                                <div class="lk-report-form-item-header">
+                                                    <div class="lk-report-form-item-header-title">Внебюджетные средства</div>
+                                                    <div class="lk-report-form-item-header-text">прошлого года</div>
+                                                </div>
+                                                <div class="lk-report-form-item-header lk-report-form-item-header-summ lk-report-form-item-header-sep">
+                                                    <div class="lk-report-form-item-header-title">Итого</div>
+                                                </div>
+                                            </div>
+
+                                            <div class="lk-report-form-items">
+                                            </div>
+
+                                            <div class="lk-report-form-item-btn-add"><a href="#" data-template="1" data-var-name="salary"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="14" y="6" width="2" height="14" transform="rotate(90 14 6)" /><rect x="8.00195" y="14" width="2" height="14" transform="rotate(-180 8.00195 14)" /></svg>добавить статью расходов</a></div>
+
+                                        </div>
+                                        <!-- lk report form subgroup END -->
+
+                                    </div>
+                                </div>
+                                <!-- lk report form group -->
+
+                                <!-- lk report form group -->
+                                <div class="lk-report-form-group">
+                                    <div class="lk-report-form-group-header">
+                                        <div class="lk-report-form-group-title"><span>7.</span>Расходы связанные с опубликованием научных статей и изданием монографий по результатам, полученным в ходе реализации Программы</div>
+                                        <div class="lk-report-form-group-summ"></div>
+                                    </div>
+                                    <div class="lk-report-form-subgroups">
+
+                                        <!-- lk report form subgroup -->
+                                        <div class="lk-report-form-subgroup">
+                                            <div class="lk-report-form-item-headers">
+                                                <div class="lk-report-form-item-header">
+                                                    <div class="lk-report-form-item-header-title">Основание</div>
+                                                    <div class="lk-report-form-item-header-text">ФИО, название статьи расходов и т.п</div>
+                                                </div>
+                                                <div class="lk-report-form-item-header lk-report-form-item-header-sep">
+                                                    <div class="lk-report-form-item-header-title">Основание</div>
+                                                    <div class="lk-report-form-item-header-text">Платежный документ</div>
+                                                </div>
+                                                <div class="lk-report-form-item-header lk-report-form-item-header-sep">
+                                                    <div class="lk-report-form-item-header-title">Средства гранта</div>
+                                                    <div class="lk-report-form-item-header-text">этого года</div>
+                                                </div>
+                                                <div class="lk-report-form-item-header">
+                                                    <div class="lk-report-form-item-header-title">Средства гранта</div>
+                                                    <div class="lk-report-form-item-header-text">прошлого года</div>
+                                                </div>
+                                                <div class="lk-report-form-item-header">
+                                                    <div class="lk-report-form-item-header-title">Внебюджетные средства</div>
+                                                    <div class="lk-report-form-item-header-text">этого года</div>
+                                                </div>
+                                                <div class="lk-report-form-item-header">
+                                                    <div class="lk-report-form-item-header-title">Внебюджетные средства</div>
+                                                    <div class="lk-report-form-item-header-text">прошлого года</div>
+                                                </div>
+                                                <div class="lk-report-form-item-header lk-report-form-item-header-summ lk-report-form-item-header-sep">
+                                                    <div class="lk-report-form-item-header-title">Итого</div>
+                                                </div>
+                                            </div>
+
+                                            <div class="lk-report-form-items">
+                                            </div>
+
+                                            <div class="lk-report-form-item-btn-add"><a href="#" data-template="1" data-var-name="salary"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="14" y="6" width="2" height="14" transform="rotate(90 14 6)" /><rect x="8.00195" y="14" width="2" height="14" transform="rotate(-180 8.00195 14)" /></svg>добавить статью расходов</a></div>
+
+                                        </div>
+                                        <!-- lk report form subgroup END -->
+
+                                    </div>
+                                </div>
+                                <!-- lk report form group -->
+
+                                <!-- lk report form group -->
+                                <div class="lk-report-form-group">
+                                    <div class="lk-report-form-group-header">
+                                        <div class="lk-report-form-group-title"><span>8.</span>Расходы на оплату работ, выполняемых сторонними организациями (не более 5% от средств гранта)</div>
+                                        <div class="lk-report-form-group-summ"></div>
+                                    </div>
+                                    <div class="lk-report-form-subgroups">
+
+                                        <!-- lk report form subgroup -->
+                                        <div class="lk-report-form-subgroup">
+                                            <div class="lk-report-form-item-headers">
+                                                <div class="lk-report-form-item-header">
+                                                    <div class="lk-report-form-item-header-title">Основание</div>
+                                                    <div class="lk-report-form-item-header-text">ФИО, название статьи расходов и т.п</div>
+                                                </div>
+                                                <div class="lk-report-form-item-header lk-report-form-item-header-sep">
+                                                    <div class="lk-report-form-item-header-title">Основание</div>
+                                                    <div class="lk-report-form-item-header-text">Платежный документ</div>
+                                                </div>
+                                                <div class="lk-report-form-item-header lk-report-form-item-header-sep">
+                                                    <div class="lk-report-form-item-header-title">Средства гранта</div>
+                                                    <div class="lk-report-form-item-header-text">этого года</div>
+                                                </div>
+                                                <div class="lk-report-form-item-header">
+                                                    <div class="lk-report-form-item-header-title">Средства гранта</div>
+                                                    <div class="lk-report-form-item-header-text">прошлого года</div>
+                                                </div>
+                                                <div class="lk-report-form-item-header">
+                                                    <div class="lk-report-form-item-header-title">Внебюджетные средства</div>
+                                                    <div class="lk-report-form-item-header-text">этого года</div>
+                                                </div>
+                                                <div class="lk-report-form-item-header">
+                                                    <div class="lk-report-form-item-header-title">Внебюджетные средства</div>
+                                                    <div class="lk-report-form-item-header-text">прошлого года</div>
+                                                </div>
+                                                <div class="lk-report-form-item-header lk-report-form-item-header-summ lk-report-form-item-header-sep">
+                                                    <div class="lk-report-form-item-header-title">Итого</div>
+                                                </div>
+                                            </div>
+
+                                            <div class="lk-report-form-items">
+                                            </div>
+
+                                            <div class="lk-report-form-item-btn-add"><a href="#" data-template="1" data-var-name="salary"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="14" y="6" width="2" height="14" transform="rotate(90 14 6)" /><rect x="8.00195" y="14" width="2" height="14" transform="rotate(-180 8.00195 14)" /></svg>добавить статью расходов</a></div>
+
+                                        </div>
+                                        <!-- lk report form subgroup END -->
+
+                                    </div>
+                                </div>
+                                <!-- lk report form group -->
+
+                                <!-- lk report form group -->
+                                <div class="lk-report-form-group">
+                                    <div class="lk-report-form-group-header">
+                                        <div class="lk-report-form-group-title"><span>9.</span>Расходы на оплату текущего ремонта лаборатории, а также прочие расходы, непосредственно связанные с проведением научного исследования и разработки технологий (не более 5% от средств гранта)</div>
+                                        <div class="lk-report-form-group-summ"></div>
+                                    </div>
+                                    <div class="lk-report-form-subgroups">
+
+                                        <!-- lk report form subgroup -->
+                                        <div class="lk-report-form-subgroup">
+                                            <div class="lk-report-form-item-headers">
+                                                <div class="lk-report-form-item-header">
+                                                    <div class="lk-report-form-item-header-title">Основание</div>
+                                                    <div class="lk-report-form-item-header-text">ФИО, название статьи расходов и т.п</div>
+                                                </div>
+                                                <div class="lk-report-form-item-header lk-report-form-item-header-sep">
+                                                    <div class="lk-report-form-item-header-title">Основание</div>
+                                                    <div class="lk-report-form-item-header-text">Платежный документ</div>
+                                                </div>
+                                                <div class="lk-report-form-item-header lk-report-form-item-header-sep">
+                                                    <div class="lk-report-form-item-header-title">Средства гранта</div>
+                                                    <div class="lk-report-form-item-header-text">этого года</div>
+                                                </div>
+                                                <div class="lk-report-form-item-header">
+                                                    <div class="lk-report-form-item-header-title">Средства гранта</div>
+                                                    <div class="lk-report-form-item-header-text">прошлого года</div>
+                                                </div>
+                                                <div class="lk-report-form-item-header">
+                                                    <div class="lk-report-form-item-header-title">Внебюджетные средства</div>
+                                                    <div class="lk-report-form-item-header-text">этого года</div>
+                                                </div>
+                                                <div class="lk-report-form-item-header">
+                                                    <div class="lk-report-form-item-header-title">Внебюджетные средства</div>
+                                                    <div class="lk-report-form-item-header-text">прошлого года</div>
+                                                </div>
+                                                <div class="lk-report-form-item-header lk-report-form-item-header-summ lk-report-form-item-header-sep">
+                                                    <div class="lk-report-form-item-header-title">Итого</div>
+                                                </div>
+                                            </div>
+
+                                            <div class="lk-report-form-items">
+                                            </div>
+
+                                            <div class="lk-report-form-item-btn-add"><a href="#" data-template="1" data-var-name="salary"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="14" y="6" width="2" height="14" transform="rotate(90 14 6)" /><rect x="8.00195" y="14" width="2" height="14" transform="rotate(-180 8.00195 14)" /></svg>добавить статью расходов</a></div>
+
+                                        </div>
+                                        <!-- lk report form subgroup END -->
+
+                                    </div>
+                                </div>
+                                <!-- lk report form group -->
+
+                                <!-- lk report form group -->
+                                <div class="lk-report-form-group">
+                                    <div class="lk-report-form-group-header">
+                                        <div class="lk-report-form-group-title"><span>10.</span>Реализация мер по формированию кадрового состава центра, включая привлечение студентов, аспирантов и молодых научно-педагогических работников , а также зарубежных ученых</div>
+                                        <div class="lk-report-form-group-summ"></div>
+                                    </div>
+                                    <div class="lk-report-form-subgroups">
+
+                                        <!-- lk report form subgroup -->
+                                        <div class="lk-report-form-subgroup">
+                                            <div class="lk-report-form-item-headers">
+                                                <div class="lk-report-form-item-header">
+                                                    <div class="lk-report-form-item-header-title">Основание</div>
+                                                    <div class="lk-report-form-item-header-text">ФИО, название статьи расходов и т.п</div>
+                                                </div>
+                                                <div class="lk-report-form-item-header lk-report-form-item-header-sep">
+                                                    <div class="lk-report-form-item-header-title">Основание</div>
+                                                    <div class="lk-report-form-item-header-text">Платежный документ</div>
+                                                </div>
+                                                <div class="lk-report-form-item-header lk-report-form-item-header-sep">
+                                                    <div class="lk-report-form-item-header-title">Средства гранта</div>
+                                                    <div class="lk-report-form-item-header-text">этого года</div>
+                                                </div>
+                                                <div class="lk-report-form-item-header">
+                                                    <div class="lk-report-form-item-header-title">Средства гранта</div>
+                                                    <div class="lk-report-form-item-header-text">прошлого года</div>
+                                                </div>
+                                                <div class="lk-report-form-item-header">
+                                                    <div class="lk-report-form-item-header-title">Внебюджетные средства</div>
+                                                    <div class="lk-report-form-item-header-text">этого года</div>
+                                                </div>
+                                                <div class="lk-report-form-item-header">
+                                                    <div class="lk-report-form-item-header-title">Внебюджетные средства</div>
+                                                    <div class="lk-report-form-item-header-text">прошлого года</div>
+                                                </div>
+                                                <div class="lk-report-form-item-header lk-report-form-item-header-summ lk-report-form-item-header-sep">
+                                                    <div class="lk-report-form-item-header-title">Итого</div>
+                                                </div>
+                                            </div>
+
+                                            <div class="lk-report-form-items">
+                                            </div>
+
+                                            <div class="lk-report-form-item-btn-add"><a href="#" data-template="1" data-var-name="salary"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="14" y="6" width="2" height="14" transform="rotate(90 14 6)" /><rect x="8.00195" y="14" width="2" height="14" transform="rotate(-180 8.00195 14)" /></svg>добавить статью расходов</a></div>
+
+                                        </div>
+                                        <!-- lk report form subgroup END -->
+
+                                    </div>
+                                </div>
+                                <!-- lk report form group -->
+
+                                <!-- lk report form group -->
+                                <div class="lk-report-form-group">
+                                    <div class="lk-report-form-group-header">
+                                        <div class="lk-report-form-group-title"><span>11.</span>Разработка и внедрение новых образовательных программ центра и/или исследовательских программ центра, в том числе при необходимости международных тематических программ</div>
+                                        <div class="lk-report-form-group-summ"></div>
+                                    </div>
+                                    <div class="lk-report-form-subgroups">
+
+                                        <!-- lk report form subgroup -->
+                                        <div class="lk-report-form-subgroup">
+                                            <div class="lk-report-form-item-headers">
+                                                <div class="lk-report-form-item-header">
+                                                    <div class="lk-report-form-item-header-title">Основание</div>
+                                                    <div class="lk-report-form-item-header-text">ФИО, название статьи расходов и т.п</div>
+                                                </div>
+                                                <div class="lk-report-form-item-header lk-report-form-item-header-sep">
+                                                    <div class="lk-report-form-item-header-title">Основание</div>
+                                                    <div class="lk-report-form-item-header-text">Платежный документ</div>
+                                                </div>
+                                                <div class="lk-report-form-item-header lk-report-form-item-header-sep">
+                                                    <div class="lk-report-form-item-header-title">Средства гранта</div>
+                                                    <div class="lk-report-form-item-header-text">этого года</div>
+                                                </div>
+                                                <div class="lk-report-form-item-header">
+                                                    <div class="lk-report-form-item-header-title">Средства гранта</div>
+                                                    <div class="lk-report-form-item-header-text">прошлого года</div>
+                                                </div>
+                                                <div class="lk-report-form-item-header">
+                                                    <div class="lk-report-form-item-header-title">Внебюджетные средства</div>
+                                                    <div class="lk-report-form-item-header-text">этого года</div>
+                                                </div>
+                                                <div class="lk-report-form-item-header">
+                                                    <div class="lk-report-form-item-header-title">Внебюджетные средства</div>
+                                                    <div class="lk-report-form-item-header-text">прошлого года</div>
+                                                </div>
+                                                <div class="lk-report-form-item-header lk-report-form-item-header-summ lk-report-form-item-header-sep">
+                                                    <div class="lk-report-form-item-header-title">Итого</div>
+                                                </div>
+                                            </div>
+
+                                            <div class="lk-report-form-items">
+                                            </div>
+
+                                            <div class="lk-report-form-item-btn-add"><a href="#" data-template="1" data-var-name="salary"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="14" y="6" width="2" height="14" transform="rotate(90 14 6)" /><rect x="8.00195" y="14" width="2" height="14" transform="rotate(-180 8.00195 14)" /></svg>добавить статью расходов</a></div>
+
                                         </div>
                                         <!-- lk report form subgroup END -->
 
@@ -413,13 +887,13 @@
                                         <div class="lk-report-form-item-drag"><svg width="12" height="9" viewBox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="12" height="1" /><rect y="4" width="12" height="1" /><rect y="8" width="12" height="1" /></svg></div>
                                         <div class="lk-report-form-item-number"></div>
                                         <div class="lk-report-form-item-row">
-                                            <div class="lk-report-form-item-field"><input type="text" name="_VAR_NAME_['name'][]" value="" /></div>
-                                            <div class="lk-report-form-item-field lk-report-form-item-field-sep"><input type="text" name="_VAR_NAME_['doc'][]" value="" /></div>
-                                            <div class="lk-report-form-item-field lk-report-form-item-field-sep"><input type="text" name="_VAR_NAME_['grant_funds'][]" value="" class="lk-report-form-item-cost" /></div>
-                                            <div class="lk-report-form-item-field"><input type="text" name="_VAR_NAME_['grant_funds_prev'][]" value="" class="lk-report-form-item-cost" /></div>
-                                            <div class="lk-report-form-item-field"><input type="text" name="_VAR_NAME_['budget_funds'][]" value="" class="lk-report-form-item-cost" /></div>
-                                            <div class="lk-report-form-item-field"><input type="text" name="_VAR_NAME_['budget_funds_prev'][]" value="" class="lk-report-form-item-cost" /></div>
-                                            <div class="lk-report-form-item-field lk-report-form-item-field-sep"><div class="lk-report-form-item-summ"></div></div>
+                                            <div class="lk-report-form-item-field"><input type="text" name="_VAR_NAME_['_VAR_ID_']['name']" value="" class="required" /></div>
+                                            <div class="lk-report-form-item-field lk-report-form-item-field-sep"><input type="text" name="_VAR_NAME_['_VAR_ID_']['doc']" value="" class="required" /></div>
+                                            <div class="lk-report-form-item-field lk-report-form-item-field-sep"><input type="text" name="_VAR_NAME_['_VAR_ID_']['grant_funds']" value="" class="lk-report-form-item-cost requiredGroup" /></div>
+                                            <div class="lk-report-form-item-field"><input type="text" name="_VAR_NAME_['_VAR_ID_']['grant_funds_prev']" value="" class="lk-report-form-item-cost requiredGroup" /></div>
+                                            <div class="lk-report-form-item-field"><input type="text" name="_VAR_NAME_['_VAR_ID_']['budget_funds']" value="" class="lk-report-form-item-cost requiredGroup" /></div>
+                                            <div class="lk-report-form-item-field"><input type="text" name="_VAR_NAME_['_VAR_ID_']['budget_funds_prev']" value="" class="lk-report-form-item-cost requiredGroup" /></div>
+                                            <div class="lk-report-form-item-field lk-report-form-item-field-summ lk-report-form-item-field-sep"><div class="lk-report-form-item-summ"></div></div>
                                         </div>
                                         <a href="#" class="lk-report-form-item-remove"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="10.9746" y="3.79883" width="1.44975" height="10.1482" transform="rotate(45 10.9746 3.79883)" /><rect x="12" y="10.9746" width="1.44975" height="10.1482" transform="rotate(135 12 10.9746)" /></svg></a>
                                     </div>
@@ -430,40 +904,40 @@
                                         <div class="lk-report-form-item-drag"><svg width="12" height="9" viewBox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="12" height="1" /><rect y="4" width="12" height="1" /><rect y="8" width="12" height="1" /></svg></div>
                                         <div class="lk-report-form-item-number"></div>
                                         <div class="lk-report-form-item-row">
-                                            <div class="lk-report-form-item-field"><input type="text" name="_VAR_NAME_['name'][]" value="" /></div>
-                                            <div class="lk-report-form-item-field lk-report-form-item-field-sep"><input type="text" name="_VAR_NAME_['doc'][]" value="" /></div>
-                                            <div class="lk-report-form-item-field lk-report-form-item-field-sep"><input type="text" name="_VAR_NAME_['grant_funds'][]" value="" class="lk-report-form-item-cost" /></div>
-                                            <div class="lk-report-form-item-field"><input type="text" name="_VAR_NAME_['grant_funds_prev'][]" value="" class="lk-report-form-item-cost" /></div>
-                                            <div class="lk-report-form-item-field"><input type="text" name="_VAR_NAME_['budget_funds'][]" value="" class="lk-report-form-item-cost" /></div>
-                                            <div class="lk-report-form-item-field"><input type="text" name="_VAR_NAME_['budget_funds_prev'][]" value="" class="lk-report-form-item-cost" /></div>
-                                            <div class="lk-report-form-item-field lk-report-form-item-field-sep"><div class="lk-report-form-item-summ"></div></div>
+                                            <div class="lk-report-form-item-field"><input type="text" name="_VAR_NAME_['_VAR_ID_']['name']" value="" class="required" /></div>
+                                            <div class="lk-report-form-item-field lk-report-form-item-field-sep"><input type="text" name="_VAR_NAME_['_VAR_ID_']['doc']" value="" class="required" /></div>
+                                            <div class="lk-report-form-item-field lk-report-form-item-field-sep"><input type="text" name="_VAR_NAME_['_VAR_ID_']['grant_funds']" value="" class="lk-report-form-item-cost requiredGroup" /></div>
+                                            <div class="lk-report-form-item-field"><input type="text" name="_VAR_NAME_['_VAR_ID_']['grant_funds_prev']" value="" class="lk-report-form-item-cost requiredGroup" /></div>
+                                            <div class="lk-report-form-item-field"><input type="text" name="_VAR_NAME_['_VAR_ID_']['budget_funds']" value="" class="lk-report-form-item-cost requiredGroup" /></div>
+                                            <div class="lk-report-form-item-field"><input type="text" name="_VAR_NAME_['_VAR_ID_']['budget_funds_prev']" value="" class="lk-report-form-item-cost requiredGroup" /></div>
+                                            <div class="lk-report-form-item-field lk-report-form-item-field-summ lk-report-form-item-field-sep"><div class="lk-report-form-item-summ"></div></div>
                                         </div>
                                         <a href="#" class="lk-report-form-item-remove"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="10.9746" y="3.79883" width="1.44975" height="10.1482" transform="rotate(45 10.9746 3.79883)" /><rect x="12" y="10.9746" width="1.44975" height="10.1482" transform="rotate(135 12 10.9746)" /></svg></a>
                                         <div class="lk-report-form-item-contract">
                                             <div class="lk-report-form-item-contract-types">
-                                                <div class="lk-report-form-item-contract-type"><label><input type="radio" name="_VAR_NAME_['contract_type'][01]" value="now" checked="checked" /><span>Контракт этого периода</span></label></div>
-                                                <div class="lk-report-form-item-contract-type"><label><input type="radio" name="_VAR_NAME_['contract_type'][01]" value="past" /><span>Контракт прошедшего периода</span></label></div>
+                                                <div class="lk-report-form-item-contract-type"><label><input type="radio" name="_VAR_NAME_['_VAR_ID_']['contract_type'][01]" value="now" checked="checked" /><span>Контракт этого периода</span></label></div>
+                                                <div class="lk-report-form-item-contract-type"><label><input type="radio" name="_VAR_NAME_['_VAR_ID_']['contract_type'][01]" value="past" /><span>Контракт прошедшего периода</span></label></div>
                                             </div>
                                             <div class="lk-report-form-item-contract-info">
                                                 <div class="lk-report-form-item-contract-field">
                                                     <div class="lk-report-form-item-contract-field-label">Номер закупки</div>
-                                                    <div class="lk-report-form-item-contract-field-input"><input type="text" name="_VAR_NAME_['contract_info_buy'][]" value="" /></div>
+                                                    <div class="lk-report-form-item-contract-field-input"><input type="text" name="_VAR_NAME_['_VAR_ID_']['contract_info_buy']" value="" class="required" /></div>
                                                 </div>
                                                 <div class="lk-report-form-item-contract-field">
                                                     <div class="lk-report-form-item-contract-field-label">Номер договора</div>
-                                                    <div class="lk-report-form-item-contract-field-input"><input type="text" name="_VAR_NAME_['contract_info_number'][]" value="" /></div>
+                                                    <div class="lk-report-form-item-contract-field-input"><input type="text" name="_VAR_NAME_['_VAR_ID_']['contract_info_number']" value="" class="required" /></div>
                                                 </div>
                                                 <div class="lk-report-form-item-contract-field">
                                                     <div class="lk-report-form-item-contract-field-label">Дата заключения договора</div>
-                                                    <div class="lk-report-form-item-contract-field-input"><input type="text" name="_VAR_NAME_['contract_info_start'][]" value="" /></div>
+                                                    <div class="lk-report-form-item-contract-field-input lk-report-form-input-date"><input type="text" name="_VAR_NAME_['_VAR_ID_']['contract_info_start']" value="" class="required" /></div>
                                                 </div>
                                                 <div class="lk-report-form-item-contract-field">
                                                     <div class="lk-report-form-item-contract-field-label">Дата исполнения обязательств</div>
-                                                    <div class="lk-report-form-item-contract-field-input"><input type="text" name="_VAR_NAME_['contract_info_end'][]" value="" /></div>
+                                                    <div class="lk-report-form-item-contract-field-input lk-report-form-input-date"><input type="text" name="_VAR_NAME_['_VAR_ID_']['contract_info_end']" value="" class="required" /></div>
                                                 </div>
                                                 <div class="lk-report-form-item-contract-field">
                                                     <div class="lk-report-form-item-contract-field-label">НМЦД, руб</div>
-                                                    <div class="lk-report-form-item-contract-field-input"><input type="text" name="_VAR_NAME_['contract_info_summ'][]" value="" /></div>
+                                                    <div class="lk-report-form-item-contract-field-input"><input type="text" name="_VAR_NAME_['_VAR_ID_']['contract_info_summ']" value="" class="required" /></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -475,6 +949,7 @@
                                 <div class="lk-report-form-window-month">Ежемесячный отчет: <span>август 2020</span></div>
                                 <div class="lk-report-form-window-summ">Итого: <strong><span></span> руб.</strong><a href="#" class="lk-report-form-window-detail-link"><svg width="37" height="37" viewBox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="18.3848" cy="18.3848" r="13" transform="rotate(45 18.3848 18.3848)" /><rect x="23.459" y="17.5176" width="1.44975" height="10.1482" transform="rotate(90 23.459 17.5176)" /><rect x="19.1094" y="23.3164" width="1.44975" height="10.1482" transform="rotate(-180 19.1094 23.3164)" /></svg></a></div>
                                 <div class="lk-report-form-window-detail">
+                                    <div class="lk-report-form-window-detail-inner"></div>
                                 </div>
                             </div>
                         </div>
@@ -530,6 +1005,10 @@
         <script src="lk/js/mcustomscrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
         <script src="lk/js/jquery.mask.min.js"></script>
         <script src="lk/js/Sortable.min.js"></script>
+        <script src="lk/js/air-datepicker/datepicker.min.js"></script>
+        <script src="lk/js/validation/jquery.validate.min.js"></script>
+        <script src="lk/js/validation/additional-methods.min.js"></script>
+        <script src="lk/js/validation/messages_ru.js"></script>
         <script src="lk/js/tools.js"></script>
     </body>
 </html>

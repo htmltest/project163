@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8" />
+        <title>НЦМУ ЛК</title>
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700,700i,900&amp;subset=cyrillic,cyrillic-ext" />
+        <link rel="icon" type="image/png" href="favicon.ico" />
+
+    	<link rel="stylesheet" href="lk/css/page.css" />
+    	<link rel="stylesheet" href="lk/js/mcustomscrollbar/jquery.mCustomScrollbar.css" />
+        <link rel="stylesheet" href="lk/css/styles.css" />
+        <link rel="stylesheet" href="lk/js/air-datepicker/datepicker.css" />
+
+        <meta name="viewport" content="width=device-width" />
+    </head>
+
+    <body>
+
+        <div class="wrap_h wrap-cabinet">
+            <div class="wrap_in">
+
+                <header>
+                    <div class="top-menu">
+                        <div class="wrap">
+                            <ul>
+                                <li><a href="#">Новости</a></li>
+                                <li><a href="#">Вопрос-ответ</a></li>
+                                <li><a href="#">Вакансии</a></li>
+                                <li><a href="#">Контакты</a></li>
+                            </ul>
+                            <div class="top-menu-lang">Ру | <a href="#">En</a></div>
+                        </div>
+                    </div>
+
+                    <div class="top">
+                        <div class="wrap">
+                            <div class="logo"><a href="/"><img src="lk/images/logo.png" /></a></div>
+                            <span class="show_nav"><span></span></span>
+                            <div class="top_user">
+                                <a href="#">Менеджер Центра (NCMU_8)</a>
+                                <ul>
+                                    <li><a href="#">Профиль</a></li>
+                                    <li class="top_user_out"><a href="#">Выход</a></li>
+                                </ul>
+                            </div>
+                            <div class="top_search">
+                                <span class="show_search"></span>
+                                <div class="search">
+                                    <form method="get" action="#">
+                                        <div class="search_inp"><input type="text" value="" placeholder="Поиск" name="q" /></div>
+                                        <div class="search_sub"><input type="submit" value="" /></div>
+                                        <div class="clear"></div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                    <div class="nav_top_bg">
+                        <div class="wrap">
+
+                            <nav class="nav_top">
+                                <ul>
+                                    <li><a href="#">Центры</a></li>
+                                    <li><a href="#">Организации</a></li>
+                                    <li class="sub_nav"><a href="#">Официальные документы</a>
+                                        <div class="nav_top_sub">
+                                            <div class="wrap">
+                                                <ul>
+                                                    <li><a href="#">Нормативные правовые документы</a></li>
+                                                </ul>
+                                                <ul>
+                                                    <li><a href="#">Документы конкурсного отбора</a></li>
+                                                </ul>
+                                                <div class="clear"></div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li><a href="#">Советы</a></li>
+                                    <li><a href="#">Результаты работы центров</a></li>
+                                    <li class="sub_nav"><a href="#">Помощь</a>
+                                        <div class="nav_top_sub">
+                                            <div class="wrap">
+                                                <ul>
+                                                    <li><a href="#">Вопросы и ответы</a></li>
+                                                </ul>
+                                                <ul>
+                                                    <li><a href="#">Контакты</a></li>
+                                                </ul>
+                                                <div class="clear"></div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <ul class="nav_mob">
+                                    <li class="nav_top_lk"><a href="#">Личный кабинет</a></li>
+                                    <li><a href="#">Поиск</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </header>
+
+                <!-- lk -->
+                <div class="lk">
+
+                    <!-- lk side -->
+                    <div class="lk-side">
+                        <div class="lk-side-menu">
+                            <ul>
+                                <li><a href="#"><div class="lk-side-menu-icon"><img src="lk/images/side-menu-01.svg" alt="" /></div>Математические НЦМУ</a></li>
+                                <li><a href="#"><div class="lk-side-menu-icon"><img src="lk/images/side-menu-02.svg" alt="" /></div>Геномные НЦМУ</a></li>
+                                <li><a href="#"><div class="lk-side-menu-icon"><img src="lk/images/side-menu-03.svg" alt="" /></div>НЦМУ по приоритетам</a></li>
+                                <li class="sep"><a href="#"><div class="lk-side-menu-icon"><img src="lk/images/side-menu-11.svg" alt="" /></div>Профиль</a></li>
+                                <li><a href="#"><div class="lk-side-menu-icon"><img src="lk/images/side-menu-04.svg" alt="" /></div>Заявки</a></li>
+                                <li class="active"><a href="#"><div class="lk-side-menu-icon"><img src="lk/images/side-menu-05.svg" alt="" /></div>Отчеты</a></li>
+                                <li><a href="#"><div class="lk-side-menu-icon"><img src="lk/images/side-menu-06.svg" alt="" /></div>Решения</a></li>
+                                <li><a href="#"><div class="lk-side-menu-icon"><img src="lk/images/side-menu-07.svg" alt="" /></div>Оценки</a></li>
+                                <li class="sep"><a href="#"><div class="lk-side-menu-icon"><img src="lk/images/side-menu-08.svg" alt="" /></div>Организации</a></li>
+                                <li><a href="#"><div class="lk-side-menu-icon"><img src="lk/images/side-menu-09.svg" alt="" /></div>Вакансии</a></li>
+                                <li class="sep"><a href="#"><div class="lk-side-menu-icon"><img src="lk/images/side-menu-10.svg" alt="" /></div>Выход</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- side END -->
+
+                    <!-- lk container -->
+                    <div class="lk-container">
+                        <div class="lk-breadcrumbs"><a href="#">Эксперт РИЭПП</a> &nbsp;—&nbsp; Ежемесячные отчеты</div>
+                        <div class="lk-page-title">Ежемесячные отчеты</div>
+
+                        <!-- lk reports -->
+                        <div class="lk-reports">
+
+                            <div class="lk-list">
+                                <div class="lk-list-headers">
+                                    <div class="lk-list-header">Период подачи отчета</div>
+                                    <div class="lk-list-header">Сумма по отчету</div>
+                                    <div class="lk-list-header">Статус</div>
+                                    <div class="lk-list-header">Файлы</div>
+                                    <div class="lk-list-header">Комментарий</div>
+                                </div>
+
+                                <div class="lk-list-row">
+                                    <div class="lk-list-cell">
+                                        <div class="lk-reports-info">
+                                            <div class="lk-reports-info-title">Отчет (1.2020)</div>
+                                            <div class="lk-reports-info-name">отчет за январь</div>
+                                        </div>
+                                    </div>
+                                    <div class="lk-list-cell">
+                                        <div class="lk-reports-summ"><div class="lk-list-cell-mobile-title">сумма по отчету</div>44 114 210,64 Р</div>
+                                    </div>
+                                    <div class="lk-list-cell">
+                                        <div class="lk-reports-status lk-reports-status-1"><span>Сохранен</span></div>
+                                    </div>
+                                    <div class="lk-list-cell lk-list-cell-nomobile">
+                                        <div class="lk-reports-files">
+                                            <div class="lk-reports-file"><a href="#">Скачать отчет <span>2.4 Мб pdf</span></a></div>
+                                        </div>
+                                    </div>
+                                    <div class="lk-list-cell">
+                                        <div class="lk-reports-comment"><div class="lk-list-cell-mobile-title">Комментарий</div>Федеральное государственное бюджетное учреждение науки Математический институт им. В. А. Стеклова Российской</div>
+                                    </div>
+                                    <div class="lk-list-cell lk-list-cell-onmobile">
+                                        <div class="lk-reports-files">
+                                            <div class="lk-reports-file"><a href="#">Скачать отчет <span>2.4 Мб pdf</span></a></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="lk-list-row">
+                                    <div class="lk-list-cell">
+                                        <div class="lk-reports-info">
+                                            <div class="lk-reports-info-title">Отчет (2.2020)</div>
+                                            <div class="lk-reports-info-name">отчет за февраль</div>
+                                        </div>
+                                    </div>
+                                    <div class="lk-list-cell">
+                                        <div class="lk-reports-summ"><div class="lk-list-cell-mobile-title">сумма по отчету</div>11 120 000 Р</div>
+                                    </div>
+                                    <div class="lk-list-cell">
+                                        <div class="lk-reports-status lk-reports-status-2"><span>На рецензировании</span></div>
+                                    </div>
+                                    <div class="lk-list-cell lk-list-cell-nomobile">
+                                        <div class="lk-reports-files">
+                                            <div class="lk-reports-file"><a href="#">Скачать отчет <span>2.4 Мб pdf</span></a></div>
+                                        </div>
+                                    </div>
+                                    <div class="lk-list-cell">
+                                        <div class="lk-reports-comment"><div class="lk-list-cell-mobile-title">Комментарий</div>Федеральное государственное бюджетное учреждение науки Математический институт им. В. А. Стеклова Российской</div>
+                                    </div>
+                                    <div class="lk-list-cell lk-list-cell-onmobile">
+                                        <div class="lk-reports-files">
+                                            <div class="lk-reports-file"><a href="#">Скачать отчет <span>2.4 Мб pdf</span></a></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="lk-list-row">
+                                    <div class="lk-list-cell">
+                                        <div class="lk-reports-info">
+                                            <div class="lk-reports-info-title">Отчет (1.2020)</div>
+                                            <div class="lk-reports-info-name">отчет за январь</div>
+                                        </div>
+                                    </div>
+                                    <div class="lk-list-cell">
+                                        <div class="lk-reports-summ"><div class="lk-list-cell-mobile-title">сумма по отчету</div>44 114 210,64 Р</div>
+                                    </div>
+                                    <div class="lk-list-cell">
+                                        <div class="lk-reports-status lk-reports-status-1"><span>Сохранен</span></div>
+                                    </div>
+                                    <div class="lk-list-cell lk-list-cell-nomobile">
+                                        <div class="lk-reports-files">
+                                            <div class="lk-reports-file"><a href="#">Скачать отчет <span>2.4 Мб pdf</span></a></div>
+                                            <div class="lk-reports-file"><a href="#">Скачать отчет <span>2.4 Мб pdf</span></a></div>
+                                        </div>
+                                    </div>
+                                    <div class="lk-list-cell">
+                                        <div class="lk-reports-comment"><div class="lk-list-cell-mobile-title">Комментарий</div>Федеральное государственное бюджетное учреждение науки Математический институт им. В. А. Стеклова Российской</div>
+                                    </div>
+                                    <div class="lk-list-cell lk-list-cell-onmobile">
+                                        <div class="lk-reports-files">
+                                            <div class="lk-reports-file"><a href="#">Скачать отчет <span>2.4 Мб pdf</span></a></div>
+                                            <div class="lk-reports-file"><a href="#">Скачать отчет <span>2.4 Мб pdf</span></a></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="lk-list-row">
+                                    <div class="lk-list-cell">
+                                        <div class="lk-reports-info">
+                                            <div class="lk-reports-info-title">Отчет (2.2020)</div>
+                                            <div class="lk-reports-info-name">отчет за февраль</div>
+                                        </div>
+                                    </div>
+                                    <div class="lk-list-cell">
+                                        <div class="lk-reports-summ"><div class="lk-list-cell-mobile-title">сумма по отчету</div>11 120 000 Р</div>
+                                    </div>
+                                    <div class="lk-list-cell">
+                                        <div class="lk-reports-status lk-reports-status-1"><span>Сохранен</span></div>
+                                    </div>
+                                    <div class="lk-list-cell lk-list-cell-nomobile">
+                                        <div class="lk-reports-files">
+                                            <div class="lk-reports-file"><a href="#">Скачать отчет <span>2.4 Мб pdf</span></a></div>
+                                        </div>
+                                    </div>
+                                    <div class="lk-list-cell">
+                                        <div class="lk-reports-comment"><div class="lk-list-cell-mobile-title">Комментарий</div>Федеральное государственное бюджетное учреждение науки Математический институт им. В. А. Стеклова Российской</div>
+                                    </div>
+                                    <div class="lk-list-cell lk-list-cell-onmobile">
+                                        <div class="lk-reports-files">
+                                            <div class="lk-reports-file"><a href="#">Скачать отчет <span>2.4 Мб pdf</span></a></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="lk-list-row">
+                                    <div class="lk-list-cell">
+                                        <div class="lk-reports-info">
+                                            <div class="lk-reports-info-title">Отчет (2.2020)</div>
+                                            <div class="lk-reports-info-name">отчет за февраль</div>
+                                        </div>
+                                    </div>
+                                    <div class="lk-list-cell">
+                                        <div class="lk-reports-summ"><div class="lk-list-cell-mobile-title">сумма по отчету</div>11 120 000 Р</div>
+                                    </div>
+                                    <div class="lk-list-cell">
+                                        <div class="lk-reports-status lk-reports-status-3"><span>На рецензировании</span></div>
+                                    </div>
+                                    <div class="lk-list-cell lk-list-cell-nomobile">
+                                        <div class="lk-reports-files">
+                                            <div class="lk-reports-file"><a href="#">Скачать отчет <span>2.4 Мб pdf</span></a></div>
+                                        </div>
+                                    </div>
+                                    <div class="lk-list-cell">
+                                        <div class="lk-reports-comment"><div class="lk-list-cell-mobile-title">Комментарий</div>Федеральное государственное бюджетное учреждение науки Математический институт им. В. А. Стеклова Российской</div>
+                                    </div>
+                                    <div class="lk-list-cell lk-list-cell-onmobile">
+                                        <div class="lk-reports-files">
+                                            <div class="lk-reports-file"><a href="#">Скачать отчет <span>2.4 Мб pdf</span></a></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="lk-list-row">
+                                    <div class="lk-list-cell">
+                                        <div class="lk-reports-info">
+                                            <div class="lk-reports-info-title">Отчет (1.2020)</div>
+                                            <div class="lk-reports-info-name">отчет за январь</div>
+                                        </div>
+                                    </div>
+                                    <div class="lk-list-cell">
+                                        <div class="lk-reports-summ"><div class="lk-list-cell-mobile-title">сумма по отчету</div>44 114 210,64 Р</div>
+                                    </div>
+                                    <div class="lk-list-cell">
+                                        <div class="lk-reports-status lk-reports-status-1"><span>Сохранен</span></div>
+                                    </div>
+                                    <div class="lk-list-cell lk-list-cell-nomobile">
+                                        <div class="lk-reports-files">
+                                            <div class="lk-reports-file"><a href="#">Скачать отчет <span>2.4 Мб pdf</span></a></div>
+                                        </div>
+                                    </div>
+                                    <div class="lk-list-cell">
+                                        <div class="lk-reports-comment"><div class="lk-list-cell-mobile-title">Комментарий</div>Федеральное государственное бюджетное учреждение науки Математический институт им. В. А. Стеклова Российской</div>
+                                    </div>
+                                    <div class="lk-list-cell lk-list-cell-onmobile">
+                                        <div class="lk-reports-files">
+                                            <div class="lk-reports-file"><a href="#">Скачать отчет <span>2.4 Мб pdf</span></a></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="lk-list-row">
+                                    <div class="lk-list-cell">
+                                        <div class="lk-reports-info">
+                                            <div class="lk-reports-info-title">Отчет (2.2020)</div>
+                                            <div class="lk-reports-info-name">отчет за февраль</div>
+                                        </div>
+                                    </div>
+                                    <div class="lk-list-cell">
+                                        <div class="lk-reports-summ"><div class="lk-list-cell-mobile-title">сумма по отчету</div>11 120 000 Р</div>
+                                    </div>
+                                    <div class="lk-list-cell">
+                                        <div class="lk-reports-status lk-reports-status-3"><span>На рецензировании</span></div>
+                                    </div>
+                                    <div class="lk-list-cell lk-list-cell-nomobile">
+                                        <div class="lk-reports-files">
+                                            <div class="lk-reports-file"><a href="#">Скачать отчет с очень длинным названием для проверки корректности работы <span>2.4 Мб pdf</span></a></div>
+                                        </div>
+                                    </div>
+                                    <div class="lk-list-cell">
+                                        <div class="lk-reports-comment"><div class="lk-list-cell-mobile-title">Комментарий</div>Федеральное государственное бюджетное учреждение науки Математический институт им. В. А. Стеклова Российской</div>
+                                    </div>
+                                    <div class="lk-list-cell lk-list-cell-onmobile">
+                                        <div class="lk-reports-files">
+                                            <div class="lk-reports-file"><a href="#">Скачать отчет с очень длинным названием для проверки корректности работы <span>2.4 Мб pdf</span></a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="pager">
+                                <a href="#" class="pager-prev"></a>
+                                <a href="#" class="active">1</a>
+                                <a href="#">2</a>
+                                <a href="#">3</a>
+                                <span>...</span>
+                                <a href="#">13</a>
+                                <a href="#">14</a>
+                                <a href="#">15</a>
+                                <a href="#" class="pager-next"></a>
+                            </div>
+                        </div>
+                        <!-- lk reports END -->
+
+                    </div>
+                    <!-- lk container END -->
+
+                </div>
+                <!-- lk END -->
+
+            </div>
+        </div>
+
+        <footer>
+            <div class="wrap">
+                <div class="logo_bot"><img src="lk/images/gerb.png" /></div>
+                <div class="copy">Портал разработан при поддержке <a href="#" target="_blank">Минобрнауки России</a>
+                    <div class="bot_tel"><a href="tel:+74959162884">+7 (495) 916-28-84</a></div>
+                </div>
+                <span class="show_bot_nav"><span></span></span>
+                <div class="clear show760"></div>
+                <nav class="nav_bot">
+                    <ul>
+                        <li><a href="#">Центры</a></li>
+                        <li><a href="#">Организации</a></li>
+                        <li><a href="#">Советы</a></li>
+                        <li><a href="#">Результаты работы центров</a></li>
+                        <li><a href="#">Помощь</a></li>
+                        <li class="active"><a href="#">Личные кабинеты</a></li>
+                    </ul>
+                </nav>
+                <nav class="nav_bot nav_bot2">
+                    <div class="nav_bot_t"><a href="#">Официальные документы</a>:</div>
+                    <ul>
+                        <li><a href="#">Нормативные правовые документы</a></li>
+                        <li><a href="#">Документы конкурсного отбора</a></li>
+                    </ul>
+                </nav>
+                <nav class="nav_bot nav_bot3">
+                    <div class="nav_bot_t"><a href="#">Советы НЦМУ</a></div>
+                    <ul>
+                    </ul>
+                </nav>
+                <div class="clear"></div>
+            </div>
+        </footer>
+
+        <script src="lk/js/html5.js"></script>
+
+        <script src="lk/js/jquery-1.12.4.min.js"></script>
+        <script src="lk/js/page.js"></script>
+        <script src="lk/js/mcustomscrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+        <script src="lk/js/jquery.mask.min.js"></script>
+        <script src="lk/js/Sortable.min.js"></script>
+        <script src="lk/js/air-datepicker/datepicker.min.js"></script>
+        <script src="lk/js/validation/jquery.validate.min.js"></script>
+        <script src="lk/js/validation/additional-methods.min.js"></script>
+        <script src="lk/js/validation/messages_ru.js"></script>
+        <script src="lk/js/tools.js"></script>
+    </body>
+</html>
